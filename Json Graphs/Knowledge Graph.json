@@ -1,0 +1,86 @@
+{
+      "directed": true,
+      "multigraph": false,
+      "graph": {},
+      "nodes": [
+            {
+                  "id": "excessive overthinking",
+                  "title": "excessive overthinking",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "insomnia",
+                  "title": "insomnia",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "stress",
+                  "title": "stress",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "a result",
+                  "title": "a result",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "overthinking",
+                  "title": "overthinking",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "anxiety",
+                  "title": "anxiety",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "a reason",
+                  "title": "a reason",
+                  "x": 615,
+                  "y": 200
+            }
+      ],
+      "links": [
+            {
+                  "predicade": "leads",
+                  "source": "excessive overthinking",
+                  "target": "insomnia"
+            },
+            {
+                  "predicade": "is",
+                  "source": "insomnia",
+                  "target": "stress"
+            },
+            {
+                  "predicade": "is",
+                  "source": "insomnia",
+                  "target": "a result"
+            },
+            {
+                  "predicade": "results",
+                  "source": "stress",
+                  "target": "insomnia"
+            },
+            {
+                  "predicade": "is",
+                  "source": "stress",
+                  "target": "a reason"
+            },
+            {
+                  "predicade": "can increase",
+                  "source": "overthinking",
+                  "target": "anxiety"
+            },
+            {
+                  "predicade": "can increase",
+                  "source": "overthinking",
+                  "target": "insomnia"
+            }
+      ]
+}
