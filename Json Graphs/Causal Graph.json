@@ -36,27 +36,27 @@
       ],
       "links": [
             {
-                  "predicade": "leads",
+                  "predicade": "leads(+ve)",
                   "source": "excessive overthinking",
                   "target": "insomnia"
             },
             {
-                  "predicade": "caused",
+                  "predicade": "caused(neutral)",
                   "source": "insomnia",
                   "target": "stress"
             },
             {
-                  "predicade": "results",
+                  "predicade": "results(neutral)",
                   "source": "stress",
                   "target": "insomnia"
             },
             {
-                  "predicade": "can increase",
+                  "predicade": "can increase(neutral)",
                   "source": "overthinking",
                   "target": "anxiety"
             },
             {
-                  "predicade": "can increase",
+                  "predicade": "can increase(neutral)",
                   "source": "overthinking",
                   "target": "insomnia"
             }
