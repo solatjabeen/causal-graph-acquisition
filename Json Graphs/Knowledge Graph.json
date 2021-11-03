@@ -4,83 +4,378 @@
       "graph": {},
       "nodes": [
             {
-                  "id": "excessive overthinking",
-                  "title": "excessive overthinking",
+                  "id": "institutional weakness",
+                  "title": "institutional weakness",
                   "x": 615,
                   "y": 200
             },
             {
-                  "id": "insomnia",
-                  "title": "insomnia",
+                  "id": "development",
+                  "title": "development",
                   "x": 615,
                   "y": 200
             },
             {
-                  "id": "stress",
-                  "title": "stress",
+                  "id": "the agriculture sector",
+                  "title": "the agriculture sector",
                   "x": 615,
                   "y": 200
             },
             {
-                  "id": "a result",
-                  "title": "a result",
+                  "id": "land rights disagreements",
+                  "title": "land rights disagreements",
                   "x": 615,
                   "y": 200
             },
             {
-                  "id": "overthinking",
-                  "title": "overthinking",
+                  "id": "conflict",
+                  "title": "conflict",
                   "x": 615,
                   "y": 200
             },
             {
-                  "id": "anxiety",
-                  "title": "anxiety",
+                  "id": "a major source",
+                  "title": "a major source",
                   "x": 615,
                   "y": 200
             },
             {
-                  "id": "a reason",
-                  "title": "a reason",
+                  "id": "farmers",
+                  "title": "farmers",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "production",
+                  "title": "production",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "traders",
+                  "title": "traders",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "marketing infrastructure",
+                  "title": "marketing infrastructure",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "retailers",
+                  "title": "retailers",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "no irrigation infrastructure",
+                  "title": "no irrigation infrastructure",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "public investment",
+                  "title": "public investment",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "the low level",
+                  "title": "the low level",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "south sudan's limited road network",
+                  "title": "south sudan's limited road network",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "only 2 percent",
+                  "title": "only 2 percent",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "roads",
+                  "title": "roads",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "the rainy season",
+                  "title": "the rainy season",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "inadequate transportation infrastructure",
+                  "title": "inadequate transportation infrastructure",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "markets",
+                  "title": "markets",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "less transport",
+                  "title": "less transport",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "moderate",
+                  "title": "moderate",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "to continue",
+                  "title": "to continue",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "heavy rainfall",
+                  "title": "heavy rainfall",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "the next two weeks",
+                  "title": "the next two weeks",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "south sudan",
+                  "title": "south sudan",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "persistent heavy rains",
+                  "title": "persistent heavy rains",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "flooding",
+                  "title": "flooding",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "the ethiopian highlands",
+                  "title": "the ethiopian highlands",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "flood prone areas",
+                  "title": "flood prone areas",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "flood-prone areas",
+                  "title": "flood-prone areas",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "highly saturated soils",
+                  "title": "highly saturated soils",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "rain",
+                  "title": "rain",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "floods",
+                  "title": "floods",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "more than 100,000 people",
+                  "title": "more than 100,000 people",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "fears",
+                  "title": "fears",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "food security",
+                  "title": "food security",
                   "x": 615,
                   "y": 200
             }
       ],
       "links": [
             {
-                  "predicade": "leads",
-                  "source": "excessive overthinking",
-                  "target": "insomnia"
+                  "predicade": "hindered",
+                  "source": "institutional weakness",
+                  "target": "development"
             },
             {
-                  "predicade": "is",
-                  "source": "insomnia",
-                  "target": "stress"
+                  "predicade": "hindered",
+                  "source": "institutional weakness",
+                  "target": "the agriculture sector"
             },
             {
-                  "predicade": "is",
-                  "source": "insomnia",
-                  "target": "a result"
+                  "predicade": "are",
+                  "source": "land rights disagreements",
+                  "target": "conflict"
             },
             {
-                  "predicade": "results",
-                  "source": "stress",
-                  "target": "insomnia"
+                  "predicade": "are",
+                  "source": "land rights disagreements",
+                  "target": "a major source"
             },
             {
-                  "predicade": "is",
-                  "source": "stress",
-                  "target": "a reason"
+                  "predicade": "discourages",
+                  "source": "conflict",
+                  "target": "farmers"
             },
             {
-                  "predicade": "can increase",
-                  "source": "overthinking",
-                  "target": "anxiety"
+                  "predicade": "discourages",
+                  "source": "conflict",
+                  "target": "production"
             },
             {
-                  "predicade": "can increase",
-                  "source": "overthinking",
-                  "target": "insomnia"
+                  "predicade": "discourages",
+                  "source": "conflict",
+                  "target": "traders"
+            },
+            {
+                  "predicade": "discourages",
+                  "source": "conflict",
+                  "target": "marketing infrastructure"
+            },
+            {
+                  "predicade": "discourages",
+                  "source": "conflict",
+                  "target": "retailers"
+            },
+            {
+                  "predicade": "shows",
+                  "source": "no irrigation infrastructure",
+                  "target": "public investment"
+            },
+            {
+                  "predicade": "shows",
+                  "source": "the low level",
+                  "target": "public investment"
+            },
+            {
+                  "predicade": "shows",
+                  "source": "the low level",
+                  "target": "no irrigation infrastructure"
+            },
+            {
+                  "predicade": "shows",
+                  "source": "south sudan's limited road network",
+                  "target": "only 2 percent"
+            },
+            {
+                  "predicade": "repaired",
+                  "source": "south sudan's limited road network",
+                  "target": "roads"
+            },
+            {
+                  "predicade": "washed",
+                  "source": "the rainy season",
+                  "target": "roads"
+            },
+            {
+                  "predicade": "resulted",
+                  "source": "inadequate transportation infrastructure",
+                  "target": "markets"
+            },
+            {
+                  "predicade": "resulted",
+                  "source": "inadequate transportation infrastructure",
+                  "target": "less transport"
+            },
+            {
+                  "predicade": "is expected",
+                  "source": "moderate",
+                  "target": "to continue"
+            },
+            {
+                  "predicade": "is expected",
+                  "source": "heavy rainfall",
+                  "target": "the next two weeks"
+            },
+            {
+                  "predicade": "is expected",
+                  "source": "heavy rainfall",
+                  "target": "south sudan"
+            },
+            {
+                  "predicade": "cause",
+                  "source": "persistent heavy rains",
+                  "target": "flooding"
+            },
+            {
+                  "predicade": "cause",
+                  "source": "persistent heavy rains",
+                  "target": "the ethiopian highlands"
+            },
+            {
+                  "predicade": "cause",
+                  "source": "persistent heavy rains",
+                  "target": "flood prone areas"
+            },
+            {
+                  "predicade": "cause",
+                  "source": "persistent heavy rains",
+                  "target": "flood-prone areas"
+            },
+            {
+                  "predicade": "cause",
+                  "source": "highly saturated soils",
+                  "target": "flooding"
+            },
+            {
+                  "predicade": "caused",
+                  "source": "rain",
+                  "target": "floods"
+            },
+            {
+                  "predicade": "have displaced",
+                  "source": "floods",
+                  "target": "more than 100,000 people"
+            },
+            {
+                  "predicade": "impact",
+                  "source": "floods",
+                  "target": "south sudan"
+            },
+            {
+                  "predicade": "raise",
+                  "source": "floods",
+                  "target": "fears"
+            },
+            {
+                  "predicade": "impact",
+                  "source": "floods",
+                  "target": "food security"
             }
       ]
 }
