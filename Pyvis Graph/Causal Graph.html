@@ -50,8 +50,8 @@
         
 
         // parsing and collecting nodes and edges from the python
-        nodes = new vis.DataSet([{"color": "#ffffff", "font": {"color": "black"}, "id": 1, "label": "Subject (cause)", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": 2, "label": "Object (effect)", "physics": "false", "shape": "box"}]);
-        edges = new vis.DataSet([{"arrows": "to", "color": "black", "from": 1, "label": "Verb (cause-effect)", "physics": "false", "to": 2, "weight": 10}]);
+        nodes = new vis.DataSet([{"color": "#ffffff", "font": {"color": "black"}, "id": "zulfikar ali bhutto", "label": "zulfikar ali bhutto", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "nuclear program", "label": "nuclear program", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "pakistan\u0027s commitment", "label": "pakistan\u0027s commitment", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "pakistan\u0027s dedication", "label": "pakistan\u0027s dedication", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "aq khan", "label": "aq khan", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "nuclear bomb", "label": "nuclear bomb", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "pakistan", "label": "pakistan", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "nuclear power", "label": "nuclear power", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "existential threats", "label": "existential threats", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "army", "label": "army", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "vigilance", "label": "vigilance", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "national survival", "label": "national survival", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "pakistan\u0027s continued existence", "label": "pakistan\u0027s continued existence", "physics": "false", "shape": "box"}]);
+        edges = new vis.DataSet([{"arrows": "to", "color": "black", "from": "zulfikar ali bhutto", "label": "launched", "physics": "false", "to": "nuclear program", "weight": 10}, {"arrows": "to", "color": "black", "from": "nuclear program", "label": "declared", "physics": "false", "to": "pakistan\u0027s commitment", "weight": 10}, {"arrows": "to", "color": "black", "from": "nuclear program", "label": "declared", "physics": "false", "to": "pakistan\u0027s dedication", "weight": 10}, {"arrows": "to", "color": "black", "from": "aq khan", "label": "developed", "physics": "false", "to": "nuclear bomb", "weight": 10}, {"arrows": "to", "color": "black", "from": "nuclear bomb", "label": "strengthened", "physics": "false", "to": "pakistan", "weight": 10}, {"arrows": "to", "color": "black", "from": "nuclear bomb", "label": "makes", "physics": "false", "to": "nuclear power", "weight": 10}, {"arrows": "to", "color": "black", "from": "pakistan", "label": "must fight", "physics": "false", "to": "existential threats", "weight": 10}, {"arrows": "to", "color": "black", "from": "pakistan", "label": "must support", "physics": "false", "to": "army", "weight": 10}, {"arrows": "to", "color": "black", "from": "army", "label": "provides", "physics": "false", "to": "vigilance", "weight": 10}, {"arrows": "to", "color": "black", "from": "vigilance", "label": "strengthened", "physics": "false", "to": "national survival", "weight": 10}, {"arrows": "to", "color": "black", "from": "nuclear bomb", "label": "guarantees", "physics": "false", "to": "pakistan\u0027s continued existence", "weight": 10}]);
 
         // adding nodes and edges to the graph
         data = {nodes: nodes, edges: edges};
@@ -65,8 +65,8 @@
             "inherit": true
         },
         "smooth": {
-            "enabled": false,
-            "type": "continuous"
+            "enabled": true,
+            "type": "discrete"
         }
     },
     "interaction": {
