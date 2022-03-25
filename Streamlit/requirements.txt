@@ -2,7 +2,6 @@ docx2txt==0.8
 matplotlib==3.1.1
 networkx==2.5.1
 neuralcoref==4.0
-neuralcoref.egg==info
 pdfplumber==0.6.0
 pyvis==0.1.8.2
 spacy==3.2.3
