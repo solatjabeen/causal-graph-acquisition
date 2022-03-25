@@ -20,7 +20,7 @@ def load_image(image_file):
 def preprocess(narrative):
 	nlp = spacy.load("en_core_web_sm")
 	neuralcoref.add_to_pipe(nlp)
-	#narrative = textacy.preprocessing.normalize_quotation_marks(narrative)
+	narrative = textacy.preprocessing.normalize_quotation_marks(narrative)
 	narrative = narrative.lower()
 	narrative = nlp(narrative)
 	narrative = narrative._.coref_resolved
