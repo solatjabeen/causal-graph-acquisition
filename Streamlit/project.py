@@ -1,6 +1,6 @@
 import streamlit as st
-#import docx2txt
-#import pdfplumber
+import docx2txt
+import pdfplumber
 import spacy
 import textacy
 import textacy.preprocessing
