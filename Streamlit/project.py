@@ -13,9 +13,10 @@ from pyvis.network import Network
 import matplotlib.pyplot as plt 
 import streamlit.components.v1 as components
 import nltk
-nltk.download('WordNetLemmatizer')
-nltk.download('word_tokenize')
-nltk.download('pos_tag')
+nltk.download('wordnet')
+nltk.download('punkt')
+nltk.download('tokenize')
+nltk.download('tag')
 #from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk import word_tokenize, pos_tag
