@@ -15,7 +15,7 @@ import streamlit.components.v1 as components
 import nltk
 nltk.download('wordnet')
 nltk.download('punkt')
-nltk.download('all-corpora')
+nltk.download('WordNetLemmatizer')
 from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk import word_tokenize, pos_tag
