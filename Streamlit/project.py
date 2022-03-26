@@ -148,7 +148,7 @@ def KnowledgeGraph(trips):
 		path = './'
 		nt.save_graph(f'{path}/Knowledge Graph.html')
 		HtmlFile = open(f'{path}/Knowledge Graph.html', 'r', encoding='utf-8')
-	components.html(HtmlFile.read(), width=700,height=600)
+	components.html(HtmlFile.read(), width=700,height=600,scrolling=True)
 	#FilterCausalSVO(trips)
 
 def FilterCausalSVO(trips):
@@ -219,7 +219,7 @@ def CausalGraph(trips):
 		path = './'
 		nt.save_graph(f'{path}/Causal Graph.html')
 		HtmlFile = open(f'{path}/Causal Graph.html', 'r', encoding='utf-8')
-	components.html(HtmlFile.read(), width=700,height=600)
+	components.html(HtmlFile.read(), width=700,height=600,scrolling=True)
 
 def main():
 	st.title("Causal Graph Aquisition")
