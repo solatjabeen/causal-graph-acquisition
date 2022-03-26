@@ -66,6 +66,8 @@ def extractSVO(narrative):
 				sentences.append(sent)
 				finalList.append(nncl[1])
 				sentences.append(sent)
+		sub = ""
+		obj = ""
 		else:
 			for token in sent:
 				if token.dep_ == 'nsubj':
