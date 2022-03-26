@@ -6,7 +6,7 @@ import textacy
 import textacy.preprocessing
 import textacy.resources
 import textacy.ke
-import neuralcoref
+#import neuralcoref
 from spacy.symbols import ORTH, POS, NOUN, VERB,PRON
 import networkx as nx
 from pyvis.network import Network
