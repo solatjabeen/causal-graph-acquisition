@@ -12,6 +12,8 @@ import networkx as nx
 from pyvis.network import Network
 import matplotlib.pyplot as plt 
 import streamlit.components.v1 as components
+import nltk
+nltk.download('wordnet')
 from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk import word_tokenize, pos_tag
@@ -40,6 +42,8 @@ def extractSVO(narrative):
 	rootCheck = False
 	varForm1 = False
 	varForm2 = False
+	sub = ""
+	obj = ""
 
 	for sent in narrative.sents:
 		for nc in sent.noun_chunks:
