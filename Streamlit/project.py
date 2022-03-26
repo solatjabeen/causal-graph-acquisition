@@ -3,7 +3,7 @@ import docx2txt
 import pdfplumber
 import spacy
 import textacy
-#import textacy.preprocessing
+import textacy.preprocessing
 import textacy.resources
 #import textacy.ke
 import neuralcoref
