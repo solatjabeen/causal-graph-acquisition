@@ -2,6 +2,7 @@ docx2txt==0.8
 matplotlib==3.1.1
 networkx==2.5.1
 neuralcoref==4.0
+nltk==3.2.4
 pdfplumber==0.6.0
 pyvis==0.1.8.2
 streamlit==1.5.0
