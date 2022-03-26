@@ -6,12 +6,15 @@ import textacy
 import textacy.preprocessing
 import textacy.resources
 import textacy.ke
-#import neuralcoref
-#from spacy.symbols import ORTH, POS, NOUN, VERB,PRON
+import neuralcoref
+from spacy.symbols import ORTH, POS, NOUN, VERB,PRON
 import networkx as nx
 from pyvis.network import Network
 import matplotlib.pyplot as plt 
 import streamlit.components.v1 as components
+from nltk.corpus import wordnet
+from nltk.stem.wordnet import WordNetLemmatizer
+from nltk import word_tokenize, pos_tag
 
 def load_image(image_file):
 	img = Image.open(image_file)
@@ -19,12 +22,12 @@ def load_image(image_file):
 
 def preprocess(narrative):
 	nlp = spacy.load("en_core_web_sm")
-#	neuralcoref.add_to_pipe(nlp)
+	neuralcoref.add_to_pipe(nlp)
 	narrative = textacy.preprocessing.normalize_quotation_marks(narrative)
 	narrative = narrative.lower()
 	narrative = nlp(narrative)
-#	narrative = narrative._.coref_resolved
-#	narrative = nlp(narrative)
+	narrative = narrative._.coref_resolved
+	narrative = nlp(narrative)
 	extractSVO(narrative)
 	#return narrative
 
@@ -139,8 +142,78 @@ def KnowledgeGraph(trips):
 		path = './'
 		nt.save_graph(f'{path}/Knowledge Graph.html')
 		HtmlFile = open(f'{path}/Knowledge Graph.html', 'r', encoding='utf-8')
-	components.html(HtmlFile.read(), width=700,height=1000)
+	components.html(HtmlFile.read(), width=700,height=600)
+	FilterCausalSVO(trips)
 
+def FilterCausalSVO(trips):
+	causalWords1 = ["forced","caused", "resulted", "reason", "as a result of", "as a consequence of", "consequence", "consequently", "affect", "because", "increase", "decrease","due to","because of","made","minimize","maximize","hindered", "displaced", "conspired","led to","activate","impel","inspire","excite","quicken","rouse","stimulate","influence","determine","likely","probable","disconnected","separated","excluded","after","as","since","trigger","oppose","fight","provides","strengthened","launched","develop","guarantees","declared", "developed","produced"]
+	synonyms1 = []
+	lemma_function = WordNetLemmatizer()
+	for cw1 in causalWords1:
+		synonyms1.append(cw1.lower())
+		tokens1 = word_tokenize(cw1)
+		for token1, tag1 in pos_tag(tokens1):
+			lemma1 = lemma_function.lemmatize(token1)
+			for syn in wordnet.synsets(str(lemma1)):
+				for l1 in syn.lemmas():
+					synonyms1.append(l1.name().lower())
+					for syn1 in wordnet.synsets(str(l1.name())):
+						for l2 in syn1.lemmas():
+							synonyms1.append(l2.name().lower())
+	synonyms = []
+	for synonym in synonyms1:
+		if synonym not in synonyms:
+			synonyms.append(synonym)
+	causeffect = []
+	for st in trips:
+		check = False
+		tokens = word_tokenize(str(st[1]))
+		for token, tag in pos_tag(tokens):
+			lemma = lemma_function.lemmatize(token)
+		for synonym in synonyms:
+			if synonym == lemma:
+				if len(causeffect) == 0:
+					causeffect.append(st)
+				else:
+					for ct in causeffect:
+						if str(st[0]) == str(ct[0]) and str(st[1]) == str(ct[1]) and str(st[2]) == str(ct[2]):
+							check = True
+							break;
+					if check == False:
+						causeffect.append(st)
+				break
+	dagCauseTriples = []
+	cg = nx.DiGraph()
+	for ce in causeffect:
+		s = str(ce[0])
+		d = str(ce[2])
+		cg.add_node(s,id = str(s),title=str(s),x=615,y=200)
+		cg.add_node(d,id = str(d),title=str(d),x=615,y=200)
+		cg.add_edge(s, d, predicade=str(ce[1]))
+		dagCauseTriples.append(ce)
+		if nx.is_directed_acyclic_graph(cg) is False:
+			cg.remove_edge(s, d)
+			dagCauseTriples.remove(ce)
+	CausalGraph(dagCauseTriples)
+
+
+def CausalGraph(trips):
+	nt = Network("500px", "1000px", notebook=True,directed=True, bgcolor='#ffffff', font_color='black', layout=None, heading='Causal Graph')
+	for dm in trips:
+		nt.add_node(str(dm[0]),shape = 'box',physics='false',color = "#ffffff")
+		nt.add_node(str(dm[2]),shape = 'box',physics='false',color = "#ffffff")
+		nt.add_edge(str(dm[0]),str(dm[2]),label=str(dm[1]), weight=10, physics='false',color='black')
+	nt.set_edge_smooth('discrete')
+	#nt.show("./Pyvis Graph/Causal Graph.html")
+	try:
+		path = '/tmp'
+		nt.save_graph(f'{path}/Causal Graph.html')
+		HtmlFile = open(f'{path}/Causal Graph.html', 'r', encoding='utf-8')
+	except:
+		path = './'
+		nt.save_graph(f'{path}/Causal Graph.html')
+		HtmlFile = open(f'{path}/Causal Graph.html', 'r', encoding='utf-8')
+	components.html(HtmlFile.read(), width=700,height=600)
 
 def main():
 	st.title("Causal Graph Aquisition")
