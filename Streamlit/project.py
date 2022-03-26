@@ -1,6 +1,6 @@
 import streamlit as st
-import docx2txt
-import pdfplumber
+#import docx2txt
+#import pdfplumber
 import spacy
 import textacy
 import textacy.preprocessing
@@ -12,13 +12,13 @@ import networkx as nx
 from pyvis.network import Network
 import matplotlib.pyplot as plt 
 import streamlit.components.v1 as components
-import nltk
-nltk.download('wordnet')
-nltk.download('punkt')
-nltk.download('WordNetLemmatizer')
-from nltk.corpus import wordnet
-from nltk.stem.wordnet import WordNetLemmatizer
-from nltk import word_tokenize, pos_tag
+#import nltk
+#nltk.download('wordnet')
+#nltk.download('punkt')
+#nltk.download('WordNetLemmatizer')
+#from nltk.corpus import wordnet
+#from nltk.stem.wordnet import WordNetLemmatizer
+#from nltk import word_tokenize, pos_tag
 
 def load_image(image_file):
 	img = Image.open(image_file)
@@ -149,7 +149,7 @@ def KnowledgeGraph(trips):
 		nt.save_graph(f'{path}/Knowledge Graph.html')
 		HtmlFile = open(f'{path}/Knowledge Graph.html', 'r', encoding='utf-8')
 	components.html(HtmlFile.read(), width=700,height=600)
-	FilterCausalSVO(trips)
+	#FilterCausalSVO(trips)
 
 def FilterCausalSVO(trips):
 	causalWords1 = ["forced","caused", "resulted", "reason", "as a result of", "as a consequence of", "consequence", "consequently", "affect", "because", "increase", "decrease","due to","because of","made","minimize","maximize","hindered", "displaced", "conspired","led to","activate","impel","inspire","excite","quicken","rouse","stimulate","influence","determine","likely","probable","disconnected","separated","excluded","after","as","since","trigger","oppose","fight","provides","strengthened","launched","develop","guarantees","declared", "developed","produced"]
@@ -245,19 +245,16 @@ def main():
 				st.text(raw_text)
 				preprocess(raw_text)
 
-			elif docx_file.type == "application/pdf":
-				try:
-					with pdfplumber.open(docx_file) as pdf:
-						pages = pdf.pages[0]
-						st.write(pages.extract_text())
-				except:
-					st.write("None")
+			#elif docx_file.type == "application/pdf":
+			#	try:
+			#		with pdfplumber.open(docx_file) as pdf:
+			#			pages = pdf.pages[0]
+			#			st.write(pages.extract_text())
+			#	except:
+			#		st.write("None")
 			else:
 				raw_text = docx2txt.process(docx_file)
 				st.write(raw_text)
 				
-				
-				
-
 if __name__ == '__main__':
 	main()
