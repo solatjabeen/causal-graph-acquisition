@@ -1,5 +1,5 @@
 import streamlit as st
-#import docx2txt
+import docx2txt
 #import pdfplumber
 import spacy
 import textacy
