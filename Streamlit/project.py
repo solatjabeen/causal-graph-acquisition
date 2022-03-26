@@ -40,6 +40,8 @@ def extractSVO(narrative):
 	rootCheck = False
 	varForm1 = False
 	varForm2 = False
+	sub = ""
+	obj = ""
 
 	for sent in narrative.sents:
 		for nc in sent.noun_chunks:
@@ -66,8 +68,6 @@ def extractSVO(narrative):
 				sentences.append(sent)
 				finalList.append(nncl[1])
 				sentences.append(sent)
-		sub = ""
-		obj = ""
 		else:
 			for token in sent:
 				if token.dep_ == 'nsubj':
