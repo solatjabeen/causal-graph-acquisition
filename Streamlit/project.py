@@ -44,6 +44,8 @@ def extractSVO(narrative):
 	rootCheck = False
 	varForm1 = False
 	varForm2 = False
+	sub = ""
+	obj = ""
 
 	for sent in narrative.sents:
 		for nc in sent.noun_chunks:
