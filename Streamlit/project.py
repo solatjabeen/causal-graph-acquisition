@@ -171,7 +171,7 @@ def FilterCausalSVO(trips):
 	#for synonym in synonyms1:
 	#	if synonym not in synonyms:
 	#		synonyms.append(synonym)
-	my_file = open(".\dictionary.txt", "r")
+	my_file = open('dictionary.txt', "r")
 	data = my_file.read()
 	synonyms = data.split("\n")
 	my_file.close()
