@@ -12,13 +12,14 @@ import networkx as nx
 from pyvis.network import Network
 import matplotlib.pyplot as plt 
 import streamlit.components.v1 as components
-#import nltk
-#nltk.download('wordnet')
-#nltk.download('punkt')
-#nltk.download('WordNetLemmatizer')
+import nltk
+nltk.download('wordnet')
+nltk.download('punkt')
+nltk.download('tokenize')
+nltk.download('tag')
 #from nltk.corpus import wordnet
-#from nltk.stem.wordnet import WordNetLemmatizer
-#from nltk import word_tokenize, pos_tag
+from nltk.stem.wordnet import WordNetLemmatizer
+from nltk import word_tokenize, pos_tag
 
 def load_image(image_file):
 	img = Image.open(image_file)
@@ -148,28 +149,33 @@ def KnowledgeGraph(trips):
 		path = './'
 		nt.save_graph(f'{path}/Knowledge Graph.html')
 		HtmlFile = open(f'{path}/Knowledge Graph.html', 'r', encoding='utf-8')
-	components.html(HtmlFile.read(), width=700,height=600,scrolling=True)
-	#FilterCausalSVO(trips)
+	components.html(HtmlFile.read(), width=700,height=600, scrolling=True)
+	FilterCausalSVO(trips)
 
 def FilterCausalSVO(trips):
-	causalWords1 = ["forced","caused", "resulted", "reason", "as a result of", "as a consequence of", "consequence", "consequently", "affect", "because", "increase", "decrease","due to","because of","made","minimize","maximize","hindered", "displaced", "conspired","led to","activate","impel","inspire","excite","quicken","rouse","stimulate","influence","determine","likely","probable","disconnected","separated","excluded","after","as","since","trigger","oppose","fight","provides","strengthened","launched","develop","guarantees","declared", "developed","produced"]
-	synonyms1 = []
+	#causalWords1 = ["forced","caused", "resulted", "reason", "as a result of", "as a consequence of", "consequence", "consequently", "affect", "because", "increase", "decrease","due to","because of","made","minimize","maximize","hindered", "displaced", "conspired","led to","activate","impel","inspire","excite","quicken","rouse","stimulate","influence","determine","likely","probable","disconnected","separated","excluded","after","as","since","trigger","oppose","fight","provides","strengthened","launched","develop","guarantees","declared", "developed","produced"]
+	#synonyms1 = []
 	lemma_function = WordNetLemmatizer()
-	for cw1 in causalWords1:
-		synonyms1.append(cw1.lower())
-		tokens1 = word_tokenize(cw1)
-		for token1, tag1 in pos_tag(tokens1):
-			lemma1 = lemma_function.lemmatize(token1)
-			for syn in wordnet.synsets(str(lemma1)):
-				for l1 in syn.lemmas():
-					synonyms1.append(l1.name().lower())
-					for syn1 in wordnet.synsets(str(l1.name())):
-						for l2 in syn1.lemmas():
-							synonyms1.append(l2.name().lower())
+	#for cw1 in causalWords1:
+	#	synonyms1.append(cw1.lower())
+	#	tokens1 = word_tokenize(cw1)
+	#	for token1, tag1 in pos_tag(tokens1):
+	#		lemma1 = lemma_function.lemmatize(token1)
+	#		for syn in wordnet.synsets(str(lemma1)):
+	#			for l1 in syn.lemmas():
+	#				synonyms1.append(l1.name().lower())
+	#				for syn1 in wordnet.synsets(str(l1.name())):
+	#					for l2 in syn1.lemmas():
+	#						synonyms1.append(l2.name().lower())
 	synonyms = []
-	for synonym in synonyms1:
-		if synonym not in synonyms:
-			synonyms.append(synonym)
+	#for synonym in synonyms1:
+	#	if synonym not in synonyms:
+	#		synonyms.append(synonym)
+	my_file = open(".\dictionary.txt", "r")
+	data = my_file.read()
+	synonyms = data.split("\n")
+	my_file.close()
+
 	causeffect = []
 	for st in trips:
 		check = False
@@ -219,7 +225,7 @@ def CausalGraph(trips):
 		path = './'
 		nt.save_graph(f'{path}/Causal Graph.html')
 		HtmlFile = open(f'{path}/Causal Graph.html', 'r', encoding='utf-8')
-	components.html(HtmlFile.read(), width=700,height=600,scrolling=True)
+	components.html(HtmlFile.read(), width=700,height=600, scrolling=True)
 
 def main():
 	st.title("Causal Graph Aquisition")
@@ -256,5 +262,8 @@ def main():
 				raw_text = docx2txt.process(docx_file)
 				st.write(raw_text)
 				
+				
+				
+
 if __name__ == '__main__':
 	main()
