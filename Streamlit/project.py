@@ -106,8 +106,6 @@ def extractSVO(narrative):
 				tuple = (obj,verb,sub)
 			else:
 				tuple = (sub,verb,obj)
-			print("Triple by combining nsubj, root and dobj:")
-			print(tuple)
 			finalList.append(tuple)
 			sentences.append(sent)
 			if len(ncl) == 3:
