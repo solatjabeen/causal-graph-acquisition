@@ -6,7 +6,7 @@ import textacy
 import textacy.preprocessing
 import textacy.resources
 import textacy.ke
-import neuralcoref
+#import neuralcoref
 from spacy.symbols import ORTH, POS, NOUN, VERB,PRON
 import networkx as nx
 from pyvis.network import Network
@@ -26,12 +26,12 @@ def load_image(image_file):
 
 def preprocess(narrative):
 	nlp = spacy.load("en_core_web_sm")
-	neuralcoref.add_to_pipe(nlp)
+	#neuralcoref.add_to_pipe(nlp)
 	narrative = textacy.preprocessing.normalize_quotation_marks(narrative)
 	narrative = narrative.lower()
 	narrative = nlp(narrative)
-	narrative = narrative._.coref_resolved
-	narrative = nlp(narrative)
+	#narrative = narrative._.coref_resolved
+	#narrative = nlp(narrative)
 	extractSVO(narrative)
 	#return narrative
 
