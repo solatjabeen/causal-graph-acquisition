@@ -132,7 +132,8 @@ def extractSVO(narrative):
 	KnowledgeGraph(trips)
 
 def KnowledgeGraph(trips):
-	nt = Network("500px", "1000px", notebook=True,directed=True, bgcolor='#ffffff', font_color='black', layout=None, heading='Knowledge Graph')
+	st.subheader("Knowledge Graph")
+	nt = Network("500px", "1000px", notebook=True,directed=True, bgcolor='#ffffff', font_color='black', layout=None)
 	for dm in trips:
 		nt.add_node(str(dm[0]),shape = 'box',physics='false',color = "#ffffff")
 		nt.add_node(str(dm[2]),shape = 'box',physics='false',color = "#ffffff")
@@ -208,7 +209,9 @@ def FilterCausalSVO(trips):
 
 
 def CausalGraph(trips):
-	nt = Network("500px", "1000px", notebook=True,directed=True, bgcolor='#ffffff', font_color='black', layout=None, heading='Causal Graph')
+	st.subheader("Causal Graph")
+	#nt = Network("500px", "1000px", notebook=True,directed=True, bgcolor='#ffffff', font_color='black', layout=None, heading='Causal Graph')
+	nt = Network("500px", "1000px", notebook=True,directed=True, bgcolor='#ffffff', font_color='black', layout=None)
 	for dm in trips:
 		nt.add_node(str(dm[0]),shape = 'box',physics='false',color = "#ffffff")
 		nt.add_node(str(dm[2]),shape = 'box',physics='false',color = "#ffffff")
