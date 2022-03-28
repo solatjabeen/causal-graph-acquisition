@@ -236,7 +236,8 @@ def main():
 
 	#if choice == "DocumentFiles":
 	#st.subheader("DocumentFiles")
-	docx_file = st.file_uploader("Upload Document", type=["pdf","docx","txt"])
+	#docx_file = st.file_uploader("Upload Document", type=["pdf","docx","txt"])
+	docx_file = st.file_uploader("Upload Document", type=["txt"])
 		
 	if st.button("Process"):
 
