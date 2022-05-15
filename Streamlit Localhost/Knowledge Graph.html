@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 1000px;
+            height: 500px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#ffffff", "font": {"color": "black"}, "id": "enemies", "label": "enemies", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "pakistan", "label": "pakistan", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "existential threats", "label": "existential threats", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "zulfikar ali bhutto", "label": "zulfikar ali bhutto", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "nuclear program", "label": "nuclear program", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "pakistan\u0027s commitment", "label": "pakistan\u0027s commitment", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "pakistan\u0027s dedication", "label": "pakistan\u0027s dedication", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "aq khan", "label": "aq khan", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "nuclear bomb", "label": "nuclear bomb", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "advanced and powerful muslim country", "label": "advanced and powerful muslim country", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "international respect", "label": "international respect", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "prestige", "label": "prestige", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "nuclear power", "label": "nuclear power", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "united states", "label": "united states", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "pakistan\u0027s nuclear capability", "label": "pakistan\u0027s nuclear capability", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "army", "label": "army", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "bomb", "label": "bomb", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "vigilance", "label": "vigilance", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "national survival", "label": "national survival", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "pakistan\u0027s continued existence", "label": "pakistan\u0027s continued existence", "physics": "false", "shape": "box"}]);
+        edges = new vis.DataSet([{"arrows": "to", "color": "black", "from": "enemies", "label": "have surrounded", "physics": "false", "to": "pakistan", "weight": 10}, {"arrows": "to", "color": "black", "from": "pakistan", "label": "has faced", "physics": "false", "to": "existential threats", "weight": 10}, {"arrows": "to", "color": "black", "from": "zulfikar ali bhutto", "label": "launched", "physics": "false", "to": "nuclear program", "weight": 10}, {"arrows": "to", "color": "black", "from": "nuclear program", "label": "declared", "physics": "false", "to": "pakistan\u0027s commitment", "weight": 10}, {"arrows": "to", "color": "black", "from": "nuclear program", "label": "declared", "physics": "false", "to": "pakistan\u0027s dedication", "weight": 10}, {"arrows": "to", "color": "black", "from": "nuclear program", "label": "declared", "physics": "false", "to": "pakistan\u0027s commitment", "weight": 10}, {"arrows": "to", "color": "black", "from": "nuclear program", "label": "declared", "physics": "false", "to": "pakistan\u0027s dedication", "weight": 10}, {"arrows": "to", "color": "black", "from": "aq khan", "label": "developed", "physics": "false", "to": "nuclear bomb", "weight": 10}, {"arrows": "to", "color": "black", "from": "nuclear bomb", "label": "strengthened", "physics": "false", "to": "pakistan", "weight": 10}, {"arrows": "to", "color": "black", "from": "pakistan", "label": "became", "physics": "false", "to": "advanced and powerful muslim country", "weight": 10}, {"arrows": "to", "color": "black", "from": "advanced and powerful muslim country", "label": "deserves", "physics": "false", "to": "international respect", "weight": 10}, {"arrows": "to", "color": "black", "from": "advanced and powerful muslim country", "label": "deserves", "physics": "false", "to": "prestige", "weight": 10}, {"arrows": "to", "color": "black", "from": "advanced and powerful muslim country", "label": "deserves", "physics": "false", "to": "international respect", "weight": 10}, {"arrows": "to", "color": "black", "from": "advanced and powerful muslim country", "label": "deserves", "physics": "false", "to": "prestige", "weight": 10}, {"arrows": "to", "color": "black", "from": "nuclear bomb", "label": "makes", "physics": "false", "to": "nuclear power", "weight": 10}, {"arrows": "to", "color": "black", "from": "pakistan", "label": "became", "physics": "false", "to": "nuclear power", "weight": 10}, {"arrows": "to", "color": "black", "from": "united states", "label": "opposes", "physics": "false", "to": "pakistan\u0027s nuclear capability", "weight": 10}, {"arrows": "to", "color": "black", "from": "united states", "label": "opposes", "physics": "false", "to": "pakistan\u0027s nuclear capability", "weight": 10}, {"arrows": "to", "color": "black", "from": "pakistan", "label": "must never surrender", "physics": "false", "to": "nuclear bomb", "weight": 10}, {"arrows": "to", "color": "black", "from": "pakistan", "label": "must fight", "physics": "false", "to": "existential threats", "weight": 10}, {"arrows": "to", "color": "black", "from": "pakistan", "label": "must support", "physics": "false", "to": "army", "weight": 10}, {"arrows": "to", "color": "black", "from": "pakistan", "label": "must support", "physics": "false", "to": "aq khan", "weight": 10}, {"arrows": "to", "color": "black", "from": "pakistan", "label": "must support", "physics": "false", "to": "army", "weight": 10}, {"arrows": "to", "color": "black", "from": "pakistan", "label": "must support", "physics": "false", "to": "aq khan", "weight": 10}, {"arrows": "to", "color": "black", "from": "army", "label": "guards", "physics": "false", "to": "bomb", "weight": 10}, {"arrows": "to", "color": "black", "from": "aq khan", "label": "gifted", "physics": "false", "to": "nuclear power", "weight": 10}, {"arrows": "to", "color": "black", "from": "army", "label": "provides", "physics": "false", "to": "vigilance", "weight": 10}, {"arrows": "to", "color": "black", "from": "vigilance", "label": "strengthened", "physics": "false", "to": "national survival", "weight": 10}, {"arrows": "to", "color": "black", "from": "nuclear bomb", "label": "guarantees", "physics": "false", "to": "pakistan\u0027s continued existence", "weight": 10}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "discrete"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
