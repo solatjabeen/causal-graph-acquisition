@@ -12,13 +12,15 @@ import networkx as nx
 from pyvis.network import Network
 import matplotlib.pyplot as plt 
 import streamlit.components.v1 as components
-#import nltk
-#nltk.download('wordnet')
-#nltk.download('punkt')
-#nltk.download('WordNetLemmatizer')
+import nltk
+nltk.download('wordnet')
+nltk.download('punkt')
+nltk.download('nltk.tokenize')
+nltk.download('nltk.tag')
+nltk.download('averaged_perceptron_tagger')
 #from nltk.corpus import wordnet
-#from nltk.stem.wordnet import WordNetLemmatizer
-#from nltk import word_tokenize, pos_tag
+from nltk.stem.wordnet import WordNetLemmatizer
+from nltk import word_tokenize, pos_tag
 
 def load_image(image_file):
 	img = Image.open(image_file)
@@ -44,8 +46,7 @@ def extractSVO(narrative):
 	rootCheck = False
 	varForm1 = False
 	varForm2 = False
-	sub = ""
-	obj = ""
+	sub = ''
 
 	for sent in narrative.sents:
 		for nc in sent.noun_chunks:
@@ -104,8 +105,6 @@ def extractSVO(narrative):
 				tuple = (obj,verb,sub)
 			else:
 				tuple = (sub,verb,obj)
-			print("Triple by combining nsubj, root and dobj:")
-			print(tuple)
 			finalList.append(tuple)
 			sentences.append(sent)
 			if len(ncl) == 3:
@@ -133,7 +132,8 @@ def extractSVO(narrative):
 	KnowledgeGraph(trips)
 
 def KnowledgeGraph(trips):
-	nt = Network("500px", "1000px", notebook=True,directed=True, bgcolor='#ffffff', font_color='black', layout=None, heading='Knowledge Graph')
+	st.subheader("Knowledge Graph")
+	nt = Network("500px", "1000px", notebook=True,directed=True, bgcolor='#ffffff', font_color='black', layout=None, heading='')
 	for dm in trips:
 		nt.add_node(str(dm[0]),shape = 'box',physics='false',color = "#ffffff")
 		nt.add_node(str(dm[2]),shape = 'box',physics='false',color = "#ffffff")
@@ -148,28 +148,33 @@ def KnowledgeGraph(trips):
 		path = './'
 		nt.save_graph(f'{path}/Knowledge Graph.html')
 		HtmlFile = open(f'{path}/Knowledge Graph.html', 'r', encoding='utf-8')
-	components.html(HtmlFile.read(), width=700,height=600,scrolling=True)
-	#FilterCausalSVO(trips)
+	components.html(HtmlFile.read(), width=700,height=600, scrolling=True)
+	FilterCausalSVO(trips)
 
 def FilterCausalSVO(trips):
-	causalWords1 = ["forced","caused", "resulted", "reason", "as a result of", "as a consequence of", "consequence", "consequently", "affect", "because", "increase", "decrease","due to","because of","made","minimize","maximize","hindered", "displaced", "conspired","led to","activate","impel","inspire","excite","quicken","rouse","stimulate","influence","determine","likely","probable","disconnected","separated","excluded","after","as","since","trigger","oppose","fight","provides","strengthened","launched","develop","guarantees","declared", "developed","produced"]
-	synonyms1 = []
+	#causalWords1 = ["forced","caused", "resulted", "reason", "as a result of", "as a consequence of", "consequence", "consequently", "affect", "because", "increase", "decrease","due to","because of","made","minimize","maximize","hindered", "displaced", "conspired","led to","activate","impel","inspire","excite","quicken","rouse","stimulate","influence","determine","likely","probable","disconnected","separated","excluded","after","as","since","trigger","oppose","fight","provides","strengthened","launched","develop","guarantees","declared", "developed","produced"]
+	#synonyms1 = []
 	lemma_function = WordNetLemmatizer()
-	for cw1 in causalWords1:
-		synonyms1.append(cw1.lower())
-		tokens1 = word_tokenize(cw1)
-		for token1, tag1 in pos_tag(tokens1):
-			lemma1 = lemma_function.lemmatize(token1)
-			for syn in wordnet.synsets(str(lemma1)):
-				for l1 in syn.lemmas():
-					synonyms1.append(l1.name().lower())
-					for syn1 in wordnet.synsets(str(l1.name())):
-						for l2 in syn1.lemmas():
-							synonyms1.append(l2.name().lower())
+	#for cw1 in causalWords1:
+	#	synonyms1.append(cw1.lower())
+	#	tokens1 = word_tokenize(cw1)
+	#	for token1, tag1 in pos_tag(tokens1):
+	#		lemma1 = lemma_function.lemmatize(token1)
+	#		for syn in wordnet.synsets(str(lemma1)):
+	#			for l1 in syn.lemmas():
+	#				synonyms1.append(l1.name().lower())
+	#				for syn1 in wordnet.synsets(str(l1.name())):
+	#					for l2 in syn1.lemmas():
+	#						synonyms1.append(l2.name().lower())
 	synonyms = []
-	for synonym in synonyms1:
-		if synonym not in synonyms:
-			synonyms.append(synonym)
+	#for synonym in synonyms1:
+	#	if synonym not in synonyms:
+	#		synonyms.append(synonym)
+	my_file = open('dictionary.txt', "r")
+	data = my_file.read()
+	synonyms = data.split("\n")
+	my_file.close()
+
 	causeffect = []
 	for st in trips:
 		check = False
@@ -204,7 +209,10 @@ def FilterCausalSVO(trips):
 
 
 def CausalGraph(trips):
-	nt = Network("500px", "1000px", notebook=True,directed=True, bgcolor='#ffffff', font_color='black', layout=None, heading='Causal Graph')
+	st.subheader("Causal Graph")
+	#nt = Network("500px", "1000px", notebook=True,directed=True, bgcolor='#ffffff', font_color='black', layout=None, heading='Causal Graph')
+	nt = Network("500px", "1000px", notebook=True,directed=True, bgcolor='#ffffff', font_color='black', layout=None, heading='')
+	
 	for dm in trips:
 		nt.add_node(str(dm[0]),shape = 'box',physics='false',color = "#ffffff")
 		nt.add_node(str(dm[2]),shape = 'box',physics='false',color = "#ffffff")
@@ -219,7 +227,7 @@ def CausalGraph(trips):
 		path = './'
 		nt.save_graph(f'{path}/Causal Graph.html')
 		HtmlFile = open(f'{path}/Causal Graph.html', 'r', encoding='utf-8')
-	components.html(HtmlFile.read(), width=700,height=600,scrolling=True)
+	components.html(HtmlFile.read(), width=700,height=600, scrolling=True)
 
 def main():
 	st.title("Causal Graph Aquisition")
@@ -229,7 +237,8 @@ def main():
 
 	#if choice == "DocumentFiles":
 	#st.subheader("DocumentFiles")
-	docx_file = st.file_uploader("Upload Document", type=["pdf","docx","txt"])
+	#docx_file = st.file_uploader("Upload Document", type=["pdf","docx","txt"])
+	docx_file = st.file_uploader("Upload Document", type=["txt"])
 		
 	if st.button("Process"):
 
@@ -256,5 +265,8 @@ def main():
 				raw_text = docx2txt.process(docx_file)
 				st.write(raw_text)
 				
+				
+				
+
 if __name__ == '__main__':
 	main()
