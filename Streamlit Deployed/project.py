@@ -20,22 +20,27 @@ nltk.download('nltk.tag')
 nltk.download('averaged_perceptron_tagger')
 #from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
-from nltk import word_tokenize, pos_tag
+from nltk import sent_tokenize, word_tokenize, pos_tag
+from allennlp_models.pretrained import load_predictor
+predictor = load_predictor("coref-spanbert") #for coreference resolution
+from textacy.preprocessing.remove import remove_punctuation
+from textacy.preprocessing.normalize import normalize_hyphenated_words
+nlp = spacy.load("en_core_web_sm")
 
 def load_image(image_file):
 	img = Image.open(image_file)
 	return img
 
 def preprocess(narrative):
-	nlp = spacy.load("en_core_web_sm")
-	#neuralcoref.add_to_pipe(nlp)
-	narrative = textacy.preprocessing.normalize_quotation_marks(narrative)
+	narrative = predictor.coref_resolved(narrative)
 	narrative = narrative.lower()
-	narrative = nlp(narrative)
-	#narrative = narrative._.coref_resolved
+	narrative = textacy.preprocessing.normalize_quotation_marks(narrative)
+	narrative = normalize_hyphenated_words(narrative)
+	narrative = textacy.preprocessing.normalize_whitespace(narrative)
+	narrative = remove_punctuation(narrative, marks=';"":')
 	#narrative = nlp(narrative)
-	extractSVO(narrative)
-	#return narrative
+	raw_sentences = sent_tokenize(str(narrative))
+	extractSVO(raw_sentences)
 
 def extractSVO(narrative):
 	finalList = []
@@ -48,7 +53,8 @@ def extractSVO(narrative):
 	varForm2 = False
 	sub = ''
 
-	for sent in narrative.sents:
+	for sent in narrative:
+		sent = nlp(sent)
 		for nc in sent.noun_chunks:
 			ncl.append(nc)
 		triplets = textacy.extract.subject_verb_object_triples(sent)
@@ -129,7 +135,28 @@ def extractSVO(narrative):
 		varForm1 = False
 		varForm2 = False
 	trips = finalList
-	KnowledgeGraph(trips)
+	CorrectTriples(trips)
+	
+
+def CorrectTriples(trips):
+	correctTriples = []
+
+	for line in trips:
+		taggedWords = []
+		taggedWords1 = []
+		check0 = False
+		check2 = False
+		taggedWords = pos_tag(word_tokenize(str(line[0])))
+		taggedWords1 = pos_tag(word_tokenize(str(line[2])))
+		for i in range(len(taggedWords)):
+			if taggedWords[i][1] == 'NN' or taggedWords[i][1] == 'NNS':
+				check0 = True
+		for i in range(len(taggedWords1)):
+			if taggedWords1[i][1] == 'NN' or taggedWords1[i][1] == 'NNS':
+				check2 = True
+		if check0 == True and check2 == True:
+			correctTriples.append(line)
+	KnowledgeGraph(correctTriples)
 
 def KnowledgeGraph(trips):
 	st.subheader("Knowledge Graph")
@@ -231,6 +258,7 @@ def CausalGraph(trips):
 
 def main():
 	st.title("Causal Graph Aquisition")
+	raw_text = st.text_area("Enter text here")
 
 	#menu = ["Image","Dataset","DocumentFiles","About"]
 	#choice = st.sidebar.selectbox("Menu",menu)
@@ -242,8 +270,7 @@ def main():
 		
 	if st.button("Process"):
 
-		if docx_file is not None:
-
+		if docx_file is not None and raw_text is None:
 			#file_details = {"filename":docx_file.name, "filetype":docx_file.type,
             #                    "filesize":docx_file.size}
 			#st.write(file_details)
@@ -261,11 +288,12 @@ def main():
 			#			st.write(pages.extract_text())
 			#	except:
 			#		st.write("None")
-			else:
-				raw_text = docx2txt.process(docx_file)
-				st.write(raw_text)
-				
-				
+			#else:
+			#	raw_text = docx2txt.process(docx_file)
+			#	st.write(raw_text)
+		elif docx_file is None and raw_text is not None:
+			preprocess(raw_text)
+
 				
 
 if __name__ == '__main__':
