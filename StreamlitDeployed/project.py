@@ -1,12 +1,10 @@
 import streamlit as st
 import docx2txt
-#import pdfplumber
 import spacy
 import textacy
 import textacy.preprocessing
 import textacy.resources
 import textacy.ke
-#import neuralcoref
 from spacy.symbols import ORTH, POS, NOUN, VERB,PRON
 import networkx as nx
 from pyvis.network import Network
@@ -18,20 +16,19 @@ nltk.download('punkt')
 nltk.download('nltk.tokenize')
 nltk.download('nltk.tag')
 nltk.download('averaged_perceptron_tagger')
-#from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk import sent_tokenize, word_tokenize, pos_tag
 from allennlp_models.pretrained import load_predictor
-predictor = load_predictor("coref-spanbert") #for coreference resolution
 from textacy.preprocessing.remove import remove_punctuation
 from textacy.preprocessing.normalize import normalize_hyphenated_words
-nlp = spacy.load("en_core_web_sm")
+
 
 def load_image(image_file):
 	img = Image.open(image_file)
 	return img
 
 def preprocess(narrative):
+	predictor = load_predictor("coref-spanbert") #for coreference resolution
 	narrative = predictor.coref_resolved(narrative)
 	narrative = narrative.lower()
 	narrative = textacy.preprocessing.normalize_quotation_marks(narrative)
@@ -43,6 +40,7 @@ def preprocess(narrative):
 	extractSVO(raw_sentences)
 
 def extractSVO(narrative):
+	nlp = spacy.load("en_core_web_sm")
 	finalList = []
 	sentences = []
 	ncl = []
@@ -270,7 +268,7 @@ def main():
 		
 	if st.button("Process"):
 
-		if docx_file is not None and raw_text is None:
+		if docx_file is not None and raw_text == "":
 			#file_details = {"filename":docx_file.name, "filetype":docx_file.type,
             #                    "filesize":docx_file.size}
 			#st.write(file_details)
@@ -288,9 +286,9 @@ def main():
 			#			st.write(pages.extract_text())
 			#	except:
 			#		st.write("None")
-			#else:
-			#	raw_text = docx2txt.process(docx_file)
-			#	st.write(raw_text)
+			else:
+				raw_text = docx2txt.process(docx_file)
+				st.write(raw_text)
 		elif docx_file is None and raw_text is not None:
 			preprocess(raw_text)
 
