@@ -18,7 +18,10 @@ nltk.download('nltk.tag')
 nltk.download('averaged_perceptron_tagger')
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk import sent_tokenize, word_tokenize, pos_tag
-from allennlp_models.pretrained import load_predictor
+#from allennlp_models.pretrained import load_predictor
+from allennlp.predictors.predictor import Predictor
+import allennlp_models.tagging
+predictor = Predictor.from_path("https://storage.googleapis.com/allennlp-public-models/coref-spanbert-large-2021.03.10.tar.gz")
 from textacy.preprocessing.remove import remove_punctuation
 from textacy.preprocessing.normalize import normalize_hyphenated_words
 
@@ -28,7 +31,7 @@ def load_image(image_file):
 	return img
 
 def preprocess(narrative):
-	predictor = load_predictor("coref-spanbert") #for coreference resolution
+	#predictor = load_predictor("coref-spanbert") #for coreference resolution
 	narrative = predictor.coref_resolved(narrative)
 	narrative = narrative.lower()
 	narrative = textacy.preprocessing.normalize_quotation_marks(narrative)
