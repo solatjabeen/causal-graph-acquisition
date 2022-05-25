@@ -10,7 +10,7 @@ import textacy.ke
 from spacy.symbols import ORTH, POS, NOUN, VERB,PRON
 import networkx as nx
 from pyvis.network import Network
-import matplotlib.pyplot as plt 
+#import matplotlib.pyplot as plt 
 import streamlit.components.v1 as components
 import nltk
 nltk.download('wordnet')
