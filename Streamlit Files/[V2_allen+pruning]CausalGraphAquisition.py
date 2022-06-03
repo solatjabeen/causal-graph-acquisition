@@ -53,6 +53,7 @@ def extractSVO(narrative):
 	varForm1 = False
 	varForm2 = False
 	sub = ''
+	obj = ''
 
 	for sent in narrative:
 		sent = nlp(sent)

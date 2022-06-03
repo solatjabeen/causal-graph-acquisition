@@ -47,6 +47,7 @@ def extractSVO(narrative):
 	varForm1 = False
 	varForm2 = False
 	sub = ''
+	obj = ''
 
 	for sent in narrative.sents:
 		for nc in sent.noun_chunks:
@@ -129,7 +130,29 @@ def extractSVO(narrative):
 		varForm1 = False
 		varForm2 = False
 	trips = finalList
-	KnowledgeGraph(trips)
+	CorrectTriples(trips)
+	
+
+def CorrectTriples(trips):
+	correctTriples = []
+
+	for line in trips:
+		taggedWords = []
+		taggedWords1 = []
+		check0 = False
+		check2 = False
+		taggedWords = pos_tag(word_tokenize(str(line[0])))
+		taggedWords1 = pos_tag(word_tokenize(str(line[2])))
+		for i in range(len(taggedWords)):
+			if taggedWords[i][1] == 'NN' or taggedWords[i][1] == 'NNS':
+				check0 = True
+		for i in range(len(taggedWords1)):
+			if taggedWords1[i][1] == 'NN' or taggedWords1[i][1] == 'NNS':
+				check2 = True
+		if check0 == True and check2 == True:
+			correctTriples.append(line)
+	KnowledgeGraph(correctTriples)
+
 
 def KnowledgeGraph(trips):
 	st.subheader("Knowledge Graph")
@@ -231,6 +254,7 @@ def CausalGraph(trips):
 
 def main():
 	st.title("Causal Graph Aquisition")
+	raw_text = st.text_area("Enter text here")
 
 	#menu = ["Image","Dataset","DocumentFiles","About"]
 	#choice = st.sidebar.selectbox("Menu",menu)
@@ -242,8 +266,7 @@ def main():
 		
 	if st.button("Process"):
 
-		if docx_file is not None:
-
+		if docx_file is not None and raw_text == "":
 			#file_details = {"filename":docx_file.name, "filetype":docx_file.type,
             #                    "filesize":docx_file.size}
 			#st.write(file_details)
@@ -264,8 +287,8 @@ def main():
 			else:
 				raw_text = docx2txt.process(docx_file)
 				st.write(raw_text)
-				
-				
+		elif docx_file is None and raw_text is not None:
+			preprocess(raw_text)
 				
 
 if __name__ == '__main__':
