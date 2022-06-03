@@ -8,6 +8,6 @@ streamlit==1.5.0
 textacy==0.10.1
 numpy==1.20.2
 click==8.0
-C++ compiler: gcc ≥9.0 or clang ≥10.0
+sklearn
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz#egg=en_core_web_sm
 
