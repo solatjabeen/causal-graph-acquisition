@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1>Causal Graph</h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 1000px;
+            height: 500px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#ffffff", "font": {"color": "black"}, "id": "athd (attention deficit hyperactivity disorder)", "label": "athd (attention deficit hyperactivity disorder)", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "pounding heart", "label": "pounding heart", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "dyspnea", "label": "dyspnea", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "feeling stressed", "label": "feeling stressed", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "palpitations", "label": "palpitations", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "lightheadedness", "label": "lightheadedness", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "catching breath", "label": "catching breath", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "tight chest", "label": "tight chest", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "disorder of thyroid gland", "label": "disorder of thyroid gland", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "tachycardia", "label": "tachycardia", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "near syncope", "label": "near syncope", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "anxiety", "label": "anxiety", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "feeling nervous", "label": "feeling nervous", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "stress at work", "label": "stress at work", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "headache", "label": "headache", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "family tension", "label": "family tension", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "loss of appetite", "label": "loss of appetite", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "tremor", "label": "tremor", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "altered bowel function", "label": "altered bowel function", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "intermittent headache", "label": "intermittent headache", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "difficulty sleeping", "label": "difficulty sleeping", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "insomnia", "label": "insomnia", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "mood swings", "label": "mood swings", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "husband deceased", "label": "husband deceased", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "initial insomnia", "label": "initial insomnia", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "changed job", "label": "changed job", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "high blood pressure", "label": "high blood pressure", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "increased appetite", "label": "increased appetite", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "hallucinations", "label": "hallucinations", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "death", "label": "death", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "disturbance in sleep behavior", "label": "disturbance in sleep behavior", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "tired", "label": "tired", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "visual hallucinations", "label": "visual hallucinations", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "malignant neoplasm of breast", "label": "malignant neoplasm of breast", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "hypertensive disorder, systemic arterial", "label": "hypertensive disorder, systemic arterial", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "daytime somnolence", "label": "daytime somnolence", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "auditory hallucinations", "label": "auditory hallucinations", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "fatigue", "label": "fatigue", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "snoring", "label": "snoring", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "anhedonia", "label": "anhedonia", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "appendicitis", "label": "appendicitis", "physics": "false", "shape": "box"}, {"color": "#ffffff", "font": {"color": "black"}, "id": "delusions", "label": "delusions", "physics": "false", "shape": "box"}]);
+        edges = new vis.DataSet([{"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "pounding heart", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "dyspnea", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "feeling stressed", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "palpitations", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "lightheadedness", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "catching breath", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "pounding heart", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "tight chest", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "lightheadedness", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "dyspnea", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "palpitations", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "disorder of thyroid gland", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "palpitations", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "tachycardia", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "tight chest", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "dyspnea", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "lightheadedness", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "pounding heart", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "tight chest", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "dyspnea", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "tachycardia", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "tight chest", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "lightheadedness", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "palpitations", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "tight chest", "weight": 10}, {"arrows": "to", "color": "black", "from": "athd (attention deficit hyperactivity disorder)", "label": "causes", "physics": "false", "to": "near syncope", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "feeling nervous", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "feeling nervous", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "stress at work", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "headache", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "family tension", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "loss of appetite", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "feeling nervous", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "palpitations", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "tremor", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "altered bowel function", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "intermittent headache", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "feeling nervous", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "difficulty sleeping", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "headache", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "feeling nervous", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "insomnia", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "mood swings", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "feeling nervous", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "feeling nervous", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "husband deceased", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "feeling nervous", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "initial insomnia", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "feeling nervous", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "changed job", "weight": 10}, {"arrows": "to", "color": "black", "from": "anxiety", "label": "causes", "physics": "false", "to": "initial insomnia", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "increased appetite", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "hallucinations", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "death", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "difficulty sleeping", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "disturbance in sleep behavior", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "death", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "initial insomnia", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "initial insomnia", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "tired", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "death", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "visual hallucinations", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "death", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "tired", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "malignant neoplasm of breast", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "hypertensive disorder, systemic arterial", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "malignant neoplasm of breast", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "insomnia", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "daytime somnolence", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "auditory hallucinations", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "insomnia", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "death", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "fatigue", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "snoring", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "anhedonia", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "increased appetite", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "difficulty sleeping", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "anhedonia", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "malignant neoplasm of breast", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "appendicitis", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "death", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "initial insomnia", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "increased appetite", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "difficulty sleeping", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "delusions", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "malignant neoplasm of breast", "weight": 10}, {"arrows": "to", "color": "black", "from": "high blood pressure", "label": "causes", "physics": "false", "to": "appendicitis", "weight": 10}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "discrete"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
