@@ -21,6 +21,7 @@ nltk.download('averaged_perceptron_tagger')
 #from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk import word_tokenize, pos_tag
+from nltk.stem import WordNetLemmatizer
 
 def load_image(image_file):
 	img = Image.open(image_file)
