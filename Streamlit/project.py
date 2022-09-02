@@ -13,11 +13,14 @@ from pyvis.network import Network
 #import matplotlib.pyplot as plt 
 import streamlit.components.v1 as components
 import nltk
-nltk.download('wordnet')
-nltk.download('punkt')
-nltk.download('nltk.tokenize')
-nltk.download('nltk.tag')
-nltk.download('averaged_perceptron_tagger')
+dler = nltk.downloader.Downloader()
+dler._update_index()
+#dler.download('all')
+dler.download('wordnet')
+dler.download('punkt')
+dler.download('nltk.tokenize')
+dler.download('nltk.tag')
+dler.download('averaged_perceptron_tagger')
 from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.stem import WordNetLemmatizer
