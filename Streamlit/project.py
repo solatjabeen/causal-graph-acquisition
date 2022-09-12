@@ -18,6 +18,7 @@ nltk.download('punkt')
 nltk.download('nltk.tokenize')
 nltk.download('nltk.tag')
 nltk.download('averaged_perceptron_tagger')
+nltk.download('omw-1.4')
 from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.stem.wordnet import WordNetLemmatizer
