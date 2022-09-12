@@ -1,6 +1,6 @@
 docx2txt==0.8
 networkx==2.5.1
-nltk
+nltk==3.2.4
 pyvis==0.1.8.2
 spacy==2.3.7
 streamlit==1.11.1
