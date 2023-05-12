@@ -4,24 +4,6 @@
       "graph": {},
       "nodes": [
             {
-                  "id": "enemies",
-                  "title": "enemies",
-                  "x": 615,
-                  "y": 200
-            },
-            {
-                  "id": "pakistan",
-                  "title": "pakistan",
-                  "x": 615,
-                  "y": 200
-            },
-            {
-                  "id": "existential threats",
-                  "title": "existential threats",
-                  "x": 615,
-                  "y": 200
-            },
-            {
                   "id": "zulfikar ali bhutto",
                   "title": "zulfikar ali bhutto",
                   "x": 615,
@@ -58,20 +40,8 @@
                   "y": 200
             },
             {
-                  "id": "advanced and powerful muslim country",
-                  "title": "advanced and powerful muslim country",
-                  "x": 615,
-                  "y": 200
-            },
-            {
-                  "id": "international respect",
-                  "title": "international respect",
-                  "x": 615,
-                  "y": 200
-            },
-            {
-                  "id": "prestige",
-                  "title": "prestige",
+                  "id": "pakistan",
+                  "title": "pakistan",
                   "x": 615,
                   "y": 200
             },
@@ -82,26 +52,20 @@
                   "y": 200
             },
             {
-                  "id": "united states",
-                  "title": "united states",
-                  "x": 615,
-                  "y": 200
-            },
-            {
-                  "id": "pakistan's nuclear capability",
-                  "title": "pakistan's nuclear capability",
-                  "x": 615,
-                  "y": 200
-            },
-            {
-                  "id": "india",
-                  "title": "india",
+                  "id": "existential threats",
+                  "title": "existential threats",
                   "x": 615,
                   "y": 200
             },
             {
                   "id": "army",
                   "title": "army",
+                  "x": 615,
+                  "y": 200
+            },
+            {
+                  "id": "",
+                  "title": "",
                   "x": 615,
                   "y": 200
             },
@@ -116,44 +80,15 @@
                   "title": "national survival",
                   "x": 615,
                   "y": 200
+            },
+            {
+                  "id": "pakistan's continued existence",
+                  "title": "pakistan's continued existence",
+                  "x": 615,
+                  "y": 200
             }
       ],
       "links": [
-            {
-                  "predicade": "surround",
-                  "source": "enemies",
-                  "target": "pakistan"
-            },
-            {
-                  "predicade": "must fight",
-                  "source": "pakistan",
-                  "target": "existential threats"
-            },
-            {
-                  "predicade": "became",
-                  "source": "pakistan",
-                  "target": "advanced and powerful muslim country"
-            },
-            {
-                  "predicade": "became",
-                  "source": "pakistan",
-                  "target": "nuclear power"
-            },
-            {
-                  "predicade": "must never surrender",
-                  "source": "pakistan",
-                  "target": "nuclear bomb"
-            },
-            {
-                  "predicade": "must support",
-                  "source": "pakistan",
-                  "target": "army"
-            },
-            {
-                  "predicade": "must support",
-                  "source": "pakistan",
-                  "target": "aq khan"
-            },
             {
                   "predicade": "launched",
                   "source": "zulfikar ali bhutto",
@@ -175,11 +110,6 @@
                   "target": "nuclear bomb"
             },
             {
-                  "predicade": "gifted",
-                  "source": "aq khan",
-                  "target": "nuclear power"
-            },
-            {
                   "predicade": "strengthened",
                   "source": "nuclear bomb",
                   "target": "pakistan"
@@ -190,29 +120,29 @@
                   "target": "nuclear power"
             },
             {
-                  "predicade": "deserves",
-                  "source": "advanced and powerful muslim country",
-                  "target": "international respect"
+                  "predicade": "guarantees",
+                  "source": "nuclear bomb",
+                  "target": "pakistan's continued existence"
             },
             {
-                  "predicade": "deserves",
-                  "source": "advanced and powerful muslim country",
-                  "target": "prestige"
+                  "predicade": "must fight",
+                  "source": "pakistan",
+                  "target": "existential threats"
             },
             {
-                  "predicade": "opposes",
-                  "source": "united states",
-                  "target": "pakistan's nuclear capability"
-            },
-            {
-                  "predicade": "opposes",
-                  "source": "india",
-                  "target": "pakistan's nuclear capability"
+                  "predicade": "must support",
+                  "source": "pakistan",
+                  "target": "army"
             },
             {
                   "predicade": "provides",
                   "source": "army",
                   "target": "vigilance"
+            },
+            {
+                  "predicade": "guards",
+                  "source": "",
+                  "target": "nuclear bomb"
             },
             {
                   "predicade": "strengthened",
