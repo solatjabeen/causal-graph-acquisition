@@ -5,7 +5,7 @@ pyvis==0.1.8.2
 spacy==2.3.7
 streamlit==1.11.1
 textacy==0.10.1
-numpy==1.20.2
+numpy==2.0.0
 click==8.0
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz#egg=en_core_web_sm
 
