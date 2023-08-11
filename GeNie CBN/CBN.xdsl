@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Node0">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node1">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0</parents>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node2">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node1</parents>
+			<probabilities>0.91 0.09 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node3">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node1</parents>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node4">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node5">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node1 Node4</parents>
+			<probabilities>0.001 0.999 0.01 0.99 0.01 0.99 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="pakistan">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5</parents>
+			<probabilities>0.04 0.96 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node7">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5</parents>
+			<probabilities>0.04 0.96 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node8">
+			<state id="True" />
+			<state id="False" />
+			<parents>pakistan</parents>
+			<probabilities>0.01 0.99 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="army">
+			<state id="True" />
+			<state id="False" />
+			<parents>pakistan</parents>
+			<probabilities>0.91 0.09 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="vigilance">
+			<state id="True" />
+			<state id="False" />
+			<parents>army</parents>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node11">
+			<state id="True" />
+			<state id="False" />
+			<parents>vigilance</parents>
+			<probabilities>0.91 0.09 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node12">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5</parents>
+			<probabilities>0.04 0.96 0.1 0.9</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.4.4601.0 ACADEMIC" name="Unnamed" faultnameformat="user">
+			<node id="Node0">
+				<name>zulfikar ali bhutto</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1037 73 1122 128</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node1">
+				<name>nuclear program</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1040 193 1125 248</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node2">
+				<name>pakistan&apos;s commitment</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1126 335 1211 390</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node3">
+				<name>pakistan&apos;s dedication</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>960 334 1045 389</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node4">
+				<name>aq khan</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>698 79 783 134</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node5">
+				<name>nuclear bomb</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>698 198 783 253</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="pakistan">
+				<name>pakistan</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>348 192 433 247</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node7">
+				<name>nuclear power</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>612 330 697 385</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node8">
+				<name>existential threats</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>444 328 529 383</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="army">
+				<name>army</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>272 328 357 383</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="vigilance">
+				<name>vigilance</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>266 446 351 501</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node11">
+				<name>national survival</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>89 444 174 499</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node12">
+				<name>pakistan&apos;s continued existence</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>795 333 880 388</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>

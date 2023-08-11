@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Node0">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="development">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0</parents>
+			<probabilities>0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="Node2">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0</parents>
+			<probabilities>0.325 0.675 0.156 0.844</probabilities>
+		</cpt>
+		<cpt id="conflict">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="farmers">
+			<state id="True" />
+			<state id="False" />
+			<parents>conflict</parents>
+			<probabilities>0.114 0.886 0.104 0.896</probabilities>
+		</cpt>
+		<cpt id="production">
+			<state id="True" />
+			<state id="False" />
+			<parents>conflict</parents>
+			<probabilities>0.101 0.899 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="traders">
+			<state id="True" />
+			<state id="False" />
+			<parents>conflict</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node7">
+			<state id="True" />
+			<state id="False" />
+			<parents>conflict</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="retailers">
+			<state id="True" />
+			<state id="False" />
+			<parents>conflict</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node11">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node9">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node11</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node10">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node9 Node11</parents>
+			<probabilities>0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node12">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node13">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node12</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node14">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="markets">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node14</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node16">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node14</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node17">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node18">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node17</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node19">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node17</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="rain">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="floods">
+			<state id="True" />
+			<state id="False" />
+			<parents>rain</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node22">
+			<state id="True" />
+			<state id="False" />
+			<parents>floods</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node23">
+			<state id="True" />
+			<state id="False" />
+			<parents>floods</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="fears">
+			<state id="True" />
+			<state id="False" />
+			<parents>floods</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node25">
+			<state id="True" />
+			<state id="False" />
+			<parents>floods</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node26">
+			<state id="True" />
+			<state id="False" />
+			<parents>floods</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.4.4601.0 ACADEMIC" name="Unnamed" faultnameformat="user">
+			<node id="Node0">
+				<name>institutional weakness</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>711 237 796 292</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="development">
+				<name>development</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>622 327 707 382</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node2">
+				<name>the agriculture sector</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>778 326 863 381</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="conflict">
+				<name>conflict</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>173 308 258 363</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="farmers">
+				<name>farmers</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>148 486 233 541</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="production">
+				<name>production</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>348 361 433 416</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="traders">
+				<name>traders</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>56 414 141 469</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node7">
+				<name>marketing infrastructure</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>353 451 438 506</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="retailers">
+				<name>retailers</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>286 539 371 594</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node9">
+				<name>no irrigation infrastructure</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>571 139 656 194</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node10">
+				<name>public investment</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>351 137 436 192</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node11">
+				<name>the low level</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>466 22 551 77</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node12">
+				<name>south sudan&apos;s limited road network</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>408 238 493 293</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node13">
+				<name>only 2 percent</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>481 344 566 399</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node14">
+				<name>inadequate transportation infrastructure</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>120 35 205 90</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="markets">
+				<name>markets</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>38 197 123 252</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node16">
+				<name>less transport</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>206 198 291 253</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node17">
+				<name>persistent heavy rains</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1033 368 1118 423</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node18">
+				<name>flood-prone areas</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>924 469 1009 524</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node19">
+				<name>the eastern sudan</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1158 470 1243 525</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="rain">
+				<name>rain</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1208 39 1293 94</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="floods">
+				<name>floods</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1044 37 1129 92</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node22">
+				<name>more than 100,000 people</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>847 152 932 207</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node23">
+				<name>south sudan</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>886 250 971 305</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="fears">
+				<name>fears</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1036 269 1121 324</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node25">
+				<name>the war-torn nation</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1180 271 1265 326</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node26">
+				<name>food security</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>833 54 918 109</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>

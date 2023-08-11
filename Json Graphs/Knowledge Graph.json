@@ -4,12 +4,6 @@
       "graph": {},
       "nodes": [
             {
-                  "id": "enemies",
-                  "title": "enemies",
-                  "x": 615,
-                  "y": 200
-            },
-            {
                   "id": "pakistan",
                   "title": "pakistan",
                   "x": 615,
@@ -116,14 +110,15 @@
                   "title": "national survival",
                   "x": 615,
                   "y": 200
+            },
+            {
+                  "id": "pakistan's continued existence",
+                  "title": "pakistan's continued existence",
+                  "x": 615,
+                  "y": 200
             }
       ],
       "links": [
-            {
-                  "predicade": "surround",
-                  "source": "enemies",
-                  "target": "pakistan"
-            },
             {
                   "predicade": "must fight",
                   "source": "pakistan",
@@ -190,6 +185,11 @@
                   "target": "nuclear power"
             },
             {
+                  "predicade": "guarantees",
+                  "source": "nuclear bomb",
+                  "target": "pakistan's continued existence"
+            },
+            {
                   "predicade": "deserves",
                   "source": "advanced and powerful muslim country",
                   "target": "international respect"
@@ -208,6 +208,11 @@
                   "predicade": "opposes",
                   "source": "india",
                   "target": "pakistan's nuclear capability"
+            },
+            {
+                  "predicade": "guards",
+                  "source": "army",
+                  "target": "nuclear bomb"
             },
             {
                   "predicade": "provides",

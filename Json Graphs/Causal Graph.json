@@ -64,12 +64,6 @@
                   "y": 200
             },
             {
-                  "id": "",
-                  "title": "",
-                  "x": 615,
-                  "y": 200
-            },
-            {
                   "id": "vigilance",
                   "title": "vigilance",
                   "x": 615,
@@ -125,6 +119,11 @@
                   "target": "pakistan's continued existence"
             },
             {
+                  "predicade": "must never surrender",
+                  "source": "pakistan",
+                  "target": "nuclear bomb"
+            },
+            {
                   "predicade": "must fight",
                   "source": "pakistan",
                   "target": "existential threats"
@@ -135,14 +134,19 @@
                   "target": "army"
             },
             {
-                  "predicade": "provides",
-                  "source": "army",
-                  "target": "vigilance"
+                  "predicade": "must support",
+                  "source": "pakistan",
+                  "target": "aq khan"
             },
             {
                   "predicade": "guards",
-                  "source": "",
+                  "source": "army",
                   "target": "nuclear bomb"
+            },
+            {
+                  "predicade": "provides",
+                  "source": "army",
+                  "target": "vigilance"
             },
             {
                   "predicade": "strengthened",
