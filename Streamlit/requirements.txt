@@ -4,6 +4,7 @@ nltk==3.8.1
 pyvis==0.1.8.2
 spacy==2.3.7
 streamlit==1.25.0
+Cython==0.29.36
 textacy==0.10.1
 numpy==1.20.2
 click==8.0
