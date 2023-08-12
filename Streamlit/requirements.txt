@@ -6,6 +6,7 @@ spacy==2.3.7
 streamlit==1.25.0
 textacy==0.10.1
 numpy==1.20.2
-click==8.0 
+click==8.0
+scikit-learn 
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
 
