@@ -2,9 +2,9 @@ docx2txt
 networkx
 nltk
 pyvis
-spacy==2.3.7
+spacy
 streamlit
-textacy==0.10.1
+textacy
 numpy
 click
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
