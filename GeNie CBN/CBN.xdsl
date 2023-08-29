@@ -7,74 +7,166 @@
 			<state id="False" />
 			<probabilities>0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="stress">
+		<cpt id="Node1">
 			<state id="True" />
 			<state id="False" />
-			<probabilities>0.1 0.9</probabilities>
+			<parents>Node0</parents>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="overthinking">
+		<cpt id="Node2">
 			<state id="True" />
 			<state id="False" />
-			<probabilities>0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="insomnia">
-			<state id="True" />
-			<state id="False" />
-			<parents>Node0 stress overthinking</parents>
-			<probabilities>0.003 0.997 0.004 0.996 0.028 0.972 0.04 0.96 0.007 0.993 0.01 0.99 0.07000000000000001 0.93 0.1 0.9</probabilities>
+			<parents>Node1</parents>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node3">
 			<state id="True" />
 			<state id="False" />
-			<parents>stress</parents>
-			<probabilities>0.01 0.99 0.1 0.9</probabilities>
+			<parents>Node1</parents>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="anxiety">
+		<cpt id="Node4">
 			<state id="True" />
 			<state id="False" />
-			<parents>overthinking</parents>
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node5">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node1 Node4</parents>
+			<probabilities>0.028 0.972 0.04 0.96 0.07000000000000001 0.93 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="pakistan">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5</parents>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node7">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5</parents>
+			<probabilities>0.07000000000000001 0.93 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node8">
+			<state id="True" />
+			<state id="False" />
+			<parents>pakistan</parents>
 			<probabilities>0.04 0.96 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="army">
+			<state id="True" />
+			<state id="False" />
+			<parents>pakistan</parents>
+			<probabilities>0.91 0.09 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="vigilance">
+			<state id="True" />
+			<state id="False" />
+			<parents>army</parents>
+			<probabilities>0.37 0.63 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node11">
+			<state id="True" />
+			<state id="False" />
+			<parents>vigilance</parents>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node12">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5</parents>
+			<probabilities>0.07000000000000001 0.93 0.1 0.9</probabilities>
 		</cpt>
 	</nodes>
 	<extensions>
 		<genie version="1.0" app="SMILE_ACADEMIC 1.6.3" name="Unnamed">
 			<node id="Node0">
-				<name>excessive overthinking</name>
+				<name>zulfikar ali bhutto</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="insomnia">
-				<name>insomnia</name>
+			<node id="Node1">
+				<name>nuclear program</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="stress">
-				<name>stress</name>
+			<node id="Node2">
+				<name>pakistan&apos;s commitment</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
 			<node id="Node3">
-				<name>my insomnia</name>
+				<name>pakistan&apos;s dedication</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="overthinking">
-				<name>overthinking</name>
+			<node id="Node4">
+				<name>aq khan</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="anxiety">
-				<name>anxiety</name>
+			<node id="Node5">
+				<name>nuclear bomb</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
+			</node>
+			<node id="pakistan">
+				<name>pakistan</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
+			</node>
+			<node id="Node7">
+				<name>nuclear power</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
+			</node>
+			<node id="Node8">
+				<name>existential threats</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
+			</node>
+			<node id="army">
+				<name>army</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
+			</node>
+			<node id="vigilance">
+				<name>vigilance</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
+			</node>
+			<node id="Node11">
+				<name>national survival</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
+			</node>
+			<node id="Node12">
+				<name>pakistan&apos;s continued existence</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
