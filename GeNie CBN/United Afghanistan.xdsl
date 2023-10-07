@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="afghans">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node0">
+			<state id="True" />
+			<state id="False" />
+			<parents>afghans</parents>
+			<probabilities>0.424 0.576 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node2">
+			<state id="True" />
+			<state id="False" />
+			<parents>afghans</parents>
+			<probabilities>0.431 0.569 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="afghanistan">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0 Node2</parents>
+			<probabilities>0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="modernization">
+			<state id="True" />
+			<state id="False" />
+			<parents>afghanistan</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="democracy">
+			<state id="True" />
+			<state id="False" />
+			<parents>afghanistan</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node5">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node8">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="taliban">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node6">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5 Node8 taliban</parents>
+			<probabilities>0.031 0.969 0.043 0.957 0.049 0.951 0.06900000000000001 0.931 0.045 0.955 0.062 0.9379999999999999 0.07199999999999999 0.928 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="violence">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5 Node8 taliban</parents>
+			<probabilities>0.024 0.976 0.036 0.964 0.041 0.959 0.063 0.9370000000000001 0.038 0.962 0.058 0.9419999999999999 0.066 0.9340000000000001 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node15">
+			<state id="True" />
+			<state id="False" />
+			<parents>afghans</parents>
+			<probabilities>0.424 0.576 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node10">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0 Node6 violence afghans Node15</parents>
+			<probabilities>0.037 0.963 0.037 0.963 0.029 0.971 0.029 0.971 0.07199999999999999 0.928 0.07199999999999999 0.928 0.057 0.9429999999999999 0.057 0.9429999999999999 0.064 0.9360000000000001 0.064 0.9360000000000001 0.051 0.949 0.051 0.949 0.285 0.715 0.285 0.715 0.1 0.9 0.1 0.9 0.037 0.963 0.037 0.963 0.029 0.971 0.029 0.971 0.07199999999999999 0.928 0.07199999999999999 0.928 0.057 0.9429999999999999 0.057 0.9429999999999999 0.064 0.9360000000000001 0.064 0.9360000000000001 0.051 0.949 0.051 0.949 0.285 0.715 0.285 0.715 0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node13">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0 afghans Node15</parents>
+			<probabilities>0.285 0.715 0.285 0.715 0.1 0.9 0.1 0.9 0.285 0.715 0.285 0.715 0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="peace">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node10 Node13</parents>
+			<probabilities>0.617 0.383 0.498 0.502 0.314 0.6860000000000001 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="prosperity">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node13</parents>
+			<probabilities>0.303 0.697 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node16">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node8</parents>
+			<probabilities>0.07000000000000001 0.93 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="chaos">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0 Node15</parents>
+			<probabilities>0.063 0.9370000000000001 0.08 0.92 0.08 0.92 0.1 0.9</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.4.4601.0 ACADEMIC" name="Unnamed" faultnameformat="user">
+			<node id="Node0">
+				<name>central government</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>280 283 365 338</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="afghanistan">
+				<name>afghanistan</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>238 402 323 457</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node2">
+				<name>zahir shah</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>136 284 221 339</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="modernization">
+				<name>modernization</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>163 515 248 570</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="democracy">
+				<name>democracy</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>323 512 408 567</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node5">
+				<name>soviet invasion</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>899 162 984 217</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node6">
+				<name>tragic fragmentation</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>764 276 849 331</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="violence">
+				<name>violence</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>931 275 1016 330</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node8">
+				<name>civil war</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1068 157 1153 212</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="taliban">
+				<name>taliban</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>740 161 825 216</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node10">
+				<name>afghanistan&apos;s unification</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>933 514 1018 569</position>
+				<barchart active="true" width="190" height="64" />
+			</node>
+			<node id="peace">
+				<name>peace</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>648 513 733 568</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="afghans">
+				<name>afghans</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>290 164 375 219</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node13">
+				<name>afghanistan&apos;s transformation</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>605 393 690 448</position>
+				<barchart active="true" width="172" height="64" />
+			</node>
+			<node id="prosperity">
+				<name>prosperity</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>490 512 575 567</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node15">
+				<name>national institutions</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>443 282 528 337</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node16">
+				<name>state&apos;s disintegration</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1098 273 1183 328</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="chaos">
+				<name>chaos</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>406 399 491 454</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>

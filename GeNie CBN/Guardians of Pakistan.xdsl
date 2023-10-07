@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="pakistanis">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node0">
+			<state id="True" />
+			<state id="False" />
+			<parents>pakistanis</parents>
+			<probabilities>0.424 0.576 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node1">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="partition">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0</parents>
+			<probabilities>0.08799999999999999 0.912 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="islam">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0</parents>
+			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node8">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="indians">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node8</parents>
+			<probabilities>0.053 0.947 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node11">
+			<state id="True" />
+			<state id="False" />
+			<parents>indians pakistanis</parents>
+			<probabilities>0.059 0.9409999999999999 0.099 0.901 0.059 0.9409999999999999 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="pakistan">
+			<state id="True" />
+			<state id="False" />
+			<parents>indians Node11</parents>
+			<probabilities>0.033 0.967 0.062 0.9379999999999999 0.053 0.947 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="enemies">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0 pakistan</parents>
+			<probabilities>0.046 0.954 0.08 0.92 0.057 0.9429999999999999 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="challenges">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0</parents>
+			<probabilities>0.063 0.9370000000000001 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node7">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0</parents>
+			<probabilities>0.3 0.7 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node10">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0</parents>
+			<probabilities>0.07199999999999999 0.928 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node13">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0</parents>
+			<probabilities>0.231 0.769 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="security">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0</parents>
+			<probabilities>0.233 0.767 0.1 0.9</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.4.4601.0 ACADEMIC" name="Unnamed" faultnameformat="user">
+			<node id="Node0">
+				<name>pakistan army</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>743 234 828 289</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node1">
+				<name>muslim warriors</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>762 452 847 507</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="partition">
+				<name>partition</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1043 454 1128 509</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="islam">
+				<name>islam</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>483 450 568 505</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="pakistan">
+				<name>pakistan</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>34 452 119 507</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="enemies">
+				<name>enemies</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>201 451 286 506</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="challenges">
+				<name>challenges</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1179 345 1264 400</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node7">
+				<name>pakistan&apos;s survival</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>900 456 985 511</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node8">
+				<name>pakistan&apos;s military martyrs</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>319 42 404 97</position>
+				<barchart active="true" width="158" height="64" />
+			</node>
+			<node id="indians">
+				<name>indians</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>214 225 299 280</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node10">
+				<name>civilian governments</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1183 453 1268 508</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node11">
+				<name>malicious plots</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>469 226 554 281</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="pakistanis">
+				<name>pakistanis</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>741 40 826 95</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node13">
+				<name>pakistan&apos;s safety</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>342 450 427 505</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="security">
+				<name>security</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>625 454 710 509</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
