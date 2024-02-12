@@ -1,0 +1,3649 @@
+{
+  "@context": {
+    "Argument": "https://w3id.org/wm/cag/argument",
+    "Grounding": "https://w3id.org/wm/cag/grounding",
+    "Interval": "https://w3id.org/wm/cag/interval",
+    "Extraction": "https://w3id.org/wm/cag/extraction",
+    "Provenance": "https://w3id.org/wm/cag/provenance",
+    "Groundings": "https://w3id.org/wm/cag/groundings",
+    "PredicateGrounding": "https://w3id.org/wm/cag/predicategrounding",
+    "State": "https://w3id.org/wm/cag/state",
+    "Dependency": "https://w3id.org/wm/cag/dependency",
+    "Corpus": "https://w3id.org/wm/cag/corpus",
+    "Trigger": "https://w3id.org/wm/cag/trigger",
+    "Sentence": "https://w3id.org/wm/cag/sentence",
+    "Word": "https://w3id.org/wm/cag/word",
+    "Document": "https://w3id.org/wm/cag/document"
+  },
+  "@type": "Corpus",
+  "documents": [
+    {
+      "@type": "Document",
+      "@id": "_:Document_1",
+      "text": "Excessive overthinking leads to insomnia. Stress caused insomnia. Insomnia causes stress. Stress results in insomnia. Stress caused my insomnia. Over thinking can increase anxiety. Over thinking can cause insomnia. Stress is a reason of my insomnia. Stress results to insomnia.",
+      "sentences": [
+        {
+          "text": "Excessive overthinking leads to insomnia .",
+          "rawText": "Excessive overthinking leads to insomnia.",
+          "words": [
+            {
+              "endOffset": 9,
+              "chunk": "B-NP",
+              "lemma": "excessive",
+              "tag": "JJ",
+              "text": "Excessive",
+              "norm": "O",
+              "entity": "B-Quantifier",
+              "startOffset": 0,
+              "@type": "Word",
+              "@id": "_:Word_1"
+            },
+            {
+              "endOffset": 22,
+              "chunk": "I-NP",
+              "lemma": "overthinking",
+              "tag": "NN",
+              "text": "overthinking",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 10,
+              "@type": "Word",
+              "@id": "_:Word_2"
+            },
+            {
+              "endOffset": 28,
+              "chunk": "B-VP",
+              "lemma": "lead",
+              "tag": "VBZ",
+              "text": "leads",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 23,
+              "@type": "Word",
+              "@id": "_:Word_3"
+            },
+            {
+              "endOffset": 31,
+              "chunk": "B-PP",
+              "lemma": "to",
+              "tag": "TO",
+              "text": "to",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 29,
+              "@type": "Word",
+              "@id": "_:Word_4"
+            },
+            {
+              "endOffset": 40,
+              "chunk": "B-NP",
+              "lemma": "insomnia",
+              "tag": "NN",
+              "text": "insomnia",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 32,
+              "@type": "Word",
+              "@id": "_:Word_5"
+            },
+            {
+              "endOffset": 41,
+              "chunk": "O",
+              "lemma": ".",
+              "tag": ".",
+              "text": ".",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 40,
+              "@type": "Word",
+              "@id": "_:Word_6"
+            }
+          ],
+          "@type": "Sentence",
+          "dependencies": [
+            {
+              "source": {
+                "@id": "_:Word_3"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_2"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_3"
+              },
+              "relation": "Ax_to",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_5"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_3"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_2"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_3"
+              },
+              "relation": "Ax",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_4"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_2"
+              },
+              "relation": "amod",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_1"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_3"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_2"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_3"
+              },
+              "relation": "nmod",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_5"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_3"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_6"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_5"
+              },
+              "relation": "case",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_4"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_2"
+              },
+              "relation": "amod",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_1"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_3"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_2"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_3"
+              },
+              "relation": "nmod_to",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_5"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_3"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_6"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_5"
+              },
+              "relation": "case",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_4"
+              }
+            }
+          ],
+          "@id": "_:Sentence_1"
+        },
+        {
+          "text": "Stress caused insomnia .",
+          "rawText": "Stress caused insomnia.",
+          "words": [
+            {
+              "endOffset": 48,
+              "chunk": "B-NP",
+              "lemma": "stress",
+              "tag": "NN",
+              "text": "Stress",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 42,
+              "@type": "Word",
+              "@id": "_:Word_7"
+            },
+            {
+              "endOffset": 55,
+              "chunk": "B-VP",
+              "lemma": "cause",
+              "tag": "VBD",
+              "text": "caused",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 49,
+              "@type": "Word",
+              "@id": "_:Word_8"
+            },
+            {
+              "endOffset": 64,
+              "chunk": "B-NP",
+              "lemma": "insomnia",
+              "tag": "NN",
+              "text": "insomnia",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 56,
+              "@type": "Word",
+              "@id": "_:Word_9"
+            },
+            {
+              "endOffset": 65,
+              "chunk": "O",
+              "lemma": ".",
+              "tag": ".",
+              "text": ".",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 64,
+              "@type": "Word",
+              "@id": "_:Word_10"
+            }
+          ],
+          "@type": "Sentence",
+          "dependencies": [
+            {
+              "source": {
+                "@id": "_:Word_8"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_9"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_8"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_7"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_8"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_7"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_8"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_9"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_8"
+              },
+              "relation": "dobj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_9"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_8"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_10"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_8"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_7"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_8"
+              },
+              "relation": "dobj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_9"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_8"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_10"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_8"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_7"
+              }
+            }
+          ],
+          "@id": "_:Sentence_2"
+        },
+        {
+          "text": "Insomnia causes stress .",
+          "rawText": "Insomnia causes stress.",
+          "words": [
+            {
+              "endOffset": 74,
+              "chunk": "B-NP",
+              "lemma": "Insomnia",
+              "tag": "NNP",
+              "text": "Insomnia",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 66,
+              "@type": "Word",
+              "@id": "_:Word_11"
+            },
+            {
+              "endOffset": 81,
+              "chunk": "B-VP",
+              "lemma": "cause",
+              "tag": "VBZ",
+              "text": "causes",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 75,
+              "@type": "Word",
+              "@id": "_:Word_12"
+            },
+            {
+              "endOffset": 88,
+              "chunk": "B-NP",
+              "lemma": "stress",
+              "tag": "NN",
+              "text": "stress",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 82,
+              "@type": "Word",
+              "@id": "_:Word_13"
+            },
+            {
+              "endOffset": 89,
+              "chunk": "O",
+              "lemma": ".",
+              "tag": ".",
+              "text": ".",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 88,
+              "@type": "Word",
+              "@id": "_:Word_14"
+            }
+          ],
+          "@type": "Sentence",
+          "dependencies": [
+            {
+              "source": {
+                "@id": "_:Word_12"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_13"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_12"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_11"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_13"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_11"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_12"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_11"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_12"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_13"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_13"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_11"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_12"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_11"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_12"
+              },
+              "relation": "dobj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_13"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_12"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_14"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_12"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_11"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_12"
+              },
+              "relation": "dobj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_13"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_12"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_14"
+              }
+            }
+          ],
+          "@id": "_:Sentence_3"
+        },
+        {
+          "text": "Stress results in insomnia .",
+          "rawText": "Stress results in insomnia.",
+          "words": [
+            {
+              "endOffset": 96,
+              "chunk": "B-NP",
+              "lemma": "stress",
+              "tag": "NN",
+              "text": "Stress",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 90,
+              "@type": "Word",
+              "@id": "_:Word_15"
+            },
+            {
+              "endOffset": 104,
+              "chunk": "B-VP",
+              "lemma": "result",
+              "tag": "VBZ",
+              "text": "results",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 97,
+              "@type": "Word",
+              "@id": "_:Word_16"
+            },
+            {
+              "endOffset": 107,
+              "chunk": "B-PP",
+              "lemma": "in",
+              "tag": "IN",
+              "text": "in",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 105,
+              "@type": "Word",
+              "@id": "_:Word_17"
+            },
+            {
+              "endOffset": 116,
+              "chunk": "B-NP",
+              "lemma": "insomnia",
+              "tag": "NN",
+              "text": "insomnia",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 108,
+              "@type": "Word",
+              "@id": "_:Word_18"
+            },
+            {
+              "endOffset": 117,
+              "chunk": "O",
+              "lemma": ".",
+              "tag": ".",
+              "text": ".",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 116,
+              "@type": "Word",
+              "@id": "_:Word_19"
+            }
+          ],
+          "@type": "Sentence",
+          "dependencies": [
+            {
+              "source": {
+                "@id": "_:Word_16"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_15"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_16"
+              },
+              "relation": "nmod",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_18"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_16"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_19"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_18"
+              },
+              "relation": "case",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_17"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_16"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_15"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_16"
+              },
+              "relation": "nmod_in",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_18"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_16"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_19"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_18"
+              },
+              "relation": "case",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_17"
+              }
+            }
+          ],
+          "@id": "_:Sentence_4"
+        },
+        {
+          "text": "Stress caused my insomnia .",
+          "rawText": "Stress caused my insomnia.",
+          "words": [
+            {
+              "endOffset": 124,
+              "chunk": "B-NP",
+              "lemma": "stress",
+              "tag": "NN",
+              "text": "Stress",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 118,
+              "@type": "Word",
+              "@id": "_:Word_20"
+            },
+            {
+              "endOffset": 131,
+              "chunk": "B-VP",
+              "lemma": "cause",
+              "tag": "VBD",
+              "text": "caused",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 125,
+              "@type": "Word",
+              "@id": "_:Word_21"
+            },
+            {
+              "endOffset": 134,
+              "chunk": "B-NP",
+              "lemma": "my",
+              "tag": "PRP$",
+              "text": "my",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 132,
+              "@type": "Word",
+              "@id": "_:Word_22"
+            },
+            {
+              "endOffset": 143,
+              "chunk": "I-NP",
+              "lemma": "insomnia",
+              "tag": "NN",
+              "text": "insomnia",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 135,
+              "@type": "Word",
+              "@id": "_:Word_23"
+            },
+            {
+              "endOffset": 144,
+              "chunk": "O",
+              "lemma": ".",
+              "tag": ".",
+              "text": ".",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 143,
+              "@type": "Word",
+              "@id": "_:Word_24"
+            }
+          ],
+          "@type": "Sentence",
+          "dependencies": [
+            {
+              "source": {
+                "@id": "_:Word_21"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_23"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_21"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_20"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_23"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_22"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_21"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_20"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_21"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_23"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_23"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_22"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_21"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_20"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_21"
+              },
+              "relation": "dobj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_23"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_21"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_24"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_23"
+              },
+              "relation": "nmod:poss",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_22"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_21"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_20"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_21"
+              },
+              "relation": "dobj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_23"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_21"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_24"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_23"
+              },
+              "relation": "nmod:poss",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_22"
+              }
+            }
+          ],
+          "@id": "_:Sentence_5"
+        },
+        {
+          "text": "Over thinking can increase anxiety .",
+          "rawText": "Over thinking can increase anxiety.",
+          "words": [
+            {
+              "endOffset": 149,
+              "chunk": "B-PP",
+              "lemma": "over",
+              "tag": "IN",
+              "text": "Over",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 145,
+              "@type": "Word",
+              "@id": "_:Word_25"
+            },
+            {
+              "endOffset": 158,
+              "chunk": "B-NP",
+              "lemma": "think",
+              "tag": "VBG",
+              "text": "thinking",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 150,
+              "@type": "Word",
+              "@id": "_:Word_26"
+            },
+            {
+              "endOffset": 162,
+              "chunk": "I-NP",
+              "lemma": "can",
+              "tag": "MD",
+              "text": "can",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 159,
+              "@type": "Word",
+              "@id": "_:Word_27"
+            },
+            {
+              "endOffset": 171,
+              "chunk": "I-NP",
+              "lemma": "increase",
+              "tag": "VB",
+              "text": "increase",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 163,
+              "@type": "Word",
+              "@id": "_:Word_28"
+            },
+            {
+              "endOffset": 179,
+              "chunk": "I-NP",
+              "lemma": "anxiety",
+              "tag": "NN",
+              "text": "anxiety",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 172,
+              "@type": "Word",
+              "@id": "_:Word_29"
+            },
+            {
+              "endOffset": 180,
+              "chunk": "O",
+              "lemma": ".",
+              "tag": ".",
+              "text": ".",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 179,
+              "@type": "Word",
+              "@id": "_:Word_30"
+            }
+          ],
+          "@type": "Sentence",
+          "dependencies": [
+            {
+              "source": {
+                "@id": "_:Word_28"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_29"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_28"
+              },
+              "relation": "AM-MOD",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_27"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_28"
+              },
+              "relation": "AM-MOD",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_27"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_28"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_29"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_26"
+              },
+              "relation": "mark",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_25"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_28"
+              },
+              "relation": "csubj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_26"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_28"
+              },
+              "relation": "aux",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_27"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_28"
+              },
+              "relation": "dobj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_29"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_28"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_30"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_26"
+              },
+              "relation": "mark",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_25"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_28"
+              },
+              "relation": "csubj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_26"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_28"
+              },
+              "relation": "aux",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_27"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_28"
+              },
+              "relation": "dobj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_29"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_28"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_30"
+              }
+            }
+          ],
+          "@id": "_:Sentence_6"
+        },
+        {
+          "text": "Over thinking can cause insomnia .",
+          "rawText": "Over thinking can cause insomnia.",
+          "words": [
+            {
+              "endOffset": 185,
+              "chunk": "B-PP",
+              "lemma": "over",
+              "tag": "IN",
+              "text": "Over",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 181,
+              "@type": "Word",
+              "@id": "_:Word_31"
+            },
+            {
+              "endOffset": 194,
+              "chunk": "B-NP",
+              "lemma": "think",
+              "tag": "VBG",
+              "text": "thinking",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 186,
+              "@type": "Word",
+              "@id": "_:Word_32"
+            },
+            {
+              "endOffset": 198,
+              "chunk": "B-VP",
+              "lemma": "can",
+              "tag": "MD",
+              "text": "can",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 195,
+              "@type": "Word",
+              "@id": "_:Word_33"
+            },
+            {
+              "endOffset": 204,
+              "chunk": "I-VP",
+              "lemma": "cause",
+              "tag": "VB",
+              "text": "cause",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 199,
+              "@type": "Word",
+              "@id": "_:Word_34"
+            },
+            {
+              "endOffset": 213,
+              "chunk": "B-NP",
+              "lemma": "insomnia",
+              "tag": "NN",
+              "text": "insomnia",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 205,
+              "@type": "Word",
+              "@id": "_:Word_35"
+            },
+            {
+              "endOffset": 214,
+              "chunk": "O",
+              "lemma": ".",
+              "tag": ".",
+              "text": ".",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 213,
+              "@type": "Word",
+              "@id": "_:Word_36"
+            }
+          ],
+          "@type": "Sentence",
+          "dependencies": [
+            {
+              "source": {
+                "@id": "_:Word_34"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_35"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_34"
+              },
+              "relation": "AM-MOD",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_33"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_34"
+              },
+              "relation": "AM-MOD",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_33"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_34"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_35"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_32"
+              },
+              "relation": "mark",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_31"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_34"
+              },
+              "relation": "csubj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_32"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_34"
+              },
+              "relation": "aux",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_33"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_34"
+              },
+              "relation": "dobj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_35"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_34"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_36"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_32"
+              },
+              "relation": "mark",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_31"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_34"
+              },
+              "relation": "csubj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_32"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_34"
+              },
+              "relation": "aux",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_33"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_34"
+              },
+              "relation": "dobj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_35"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_34"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_36"
+              }
+            }
+          ],
+          "@id": "_:Sentence_7"
+        },
+        {
+          "text": "Stress is a reason of my insomnia .",
+          "rawText": "Stress is a reason of my insomnia.",
+          "words": [
+            {
+              "endOffset": 221,
+              "chunk": "B-NP",
+              "lemma": "stress",
+              "tag": "NN",
+              "text": "Stress",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 215,
+              "@type": "Word",
+              "@id": "_:Word_37"
+            },
+            {
+              "endOffset": 224,
+              "chunk": "B-VP",
+              "lemma": "be",
+              "tag": "VBZ",
+              "text": "is",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 222,
+              "@type": "Word",
+              "@id": "_:Word_38"
+            },
+            {
+              "endOffset": 226,
+              "chunk": "B-NP",
+              "lemma": "a",
+              "tag": "DT",
+              "text": "a",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 225,
+              "@type": "Word",
+              "@id": "_:Word_39"
+            },
+            {
+              "endOffset": 233,
+              "chunk": "I-NP",
+              "lemma": "reason",
+              "tag": "NN",
+              "text": "reason",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 227,
+              "@type": "Word",
+              "@id": "_:Word_40"
+            },
+            {
+              "endOffset": 236,
+              "chunk": "B-PP",
+              "lemma": "of",
+              "tag": "IN",
+              "text": "of",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 234,
+              "@type": "Word",
+              "@id": "_:Word_41"
+            },
+            {
+              "endOffset": 239,
+              "chunk": "B-NP",
+              "lemma": "my",
+              "tag": "PRP$",
+              "text": "my",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 237,
+              "@type": "Word",
+              "@id": "_:Word_42"
+            },
+            {
+              "endOffset": 248,
+              "chunk": "I-NP",
+              "lemma": "insomnia",
+              "tag": "NN",
+              "text": "insomnia",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 240,
+              "@type": "Word",
+              "@id": "_:Word_43"
+            },
+            {
+              "endOffset": 249,
+              "chunk": "O",
+              "lemma": ".",
+              "tag": ".",
+              "text": ".",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 248,
+              "@type": "Word",
+              "@id": "_:Word_44"
+            }
+          ],
+          "@type": "Sentence",
+          "dependencies": [
+            {
+              "source": {
+                "@id": "_:Word_40"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_43"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_43"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_42"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_40"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_41"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_43"
+              },
+              "relation": "A0",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_42"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_43"
+              },
+              "relation": "case",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_41"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_43"
+              },
+              "relation": "nmod:poss",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_42"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_40"
+              },
+              "relation": "nmod",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_43"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_40"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_44"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_40"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_37"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_40"
+              },
+              "relation": "cop",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_38"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_40"
+              },
+              "relation": "det",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_39"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_43"
+              },
+              "relation": "case",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_41"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_43"
+              },
+              "relation": "nmod:poss",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_42"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_40"
+              },
+              "relation": "nmod_of",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_43"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_40"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_44"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_40"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_37"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_40"
+              },
+              "relation": "cop",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_38"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_40"
+              },
+              "relation": "det",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_39"
+              }
+            }
+          ],
+          "@id": "_:Sentence_8"
+        },
+        {
+          "text": "Stress results to insomnia .",
+          "rawText": "Stress results to insomnia.",
+          "words": [
+            {
+              "endOffset": 256,
+              "chunk": "B-NP",
+              "lemma": "stress",
+              "tag": "NN",
+              "text": "Stress",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 250,
+              "@type": "Word",
+              "@id": "_:Word_45"
+            },
+            {
+              "endOffset": 264,
+              "chunk": "B-VP",
+              "lemma": "result",
+              "tag": "VBZ",
+              "text": "results",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 257,
+              "@type": "Word",
+              "@id": "_:Word_46"
+            },
+            {
+              "endOffset": 267,
+              "chunk": "B-PP",
+              "lemma": "to",
+              "tag": "TO",
+              "text": "to",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 265,
+              "@type": "Word",
+              "@id": "_:Word_47"
+            },
+            {
+              "endOffset": 276,
+              "chunk": "B-NP",
+              "lemma": "insomnia",
+              "tag": "NN",
+              "text": "insomnia",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 268,
+              "@type": "Word",
+              "@id": "_:Word_48"
+            },
+            {
+              "endOffset": 277,
+              "chunk": "O",
+              "lemma": ".",
+              "tag": ".",
+              "text": ".",
+              "norm": "O",
+              "entity": "O",
+              "startOffset": 276,
+              "@type": "Word",
+              "@id": "_:Word_49"
+            }
+          ],
+          "@type": "Sentence",
+          "dependencies": [
+            {
+              "source": {
+                "@id": "_:Word_46"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "enhanced-semantic-roles",
+              "destination": {
+                "@id": "_:Word_48"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_46"
+              },
+              "relation": "A1",
+              "@type": "Dependency",
+              "type": "semantic-roles",
+              "destination": {
+                "@id": "_:Word_47"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_46"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_45"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_46"
+              },
+              "relation": "nmod",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_48"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_46"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_49"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_48"
+              },
+              "relation": "case",
+              "@type": "Dependency",
+              "type": "universal-basic",
+              "destination": {
+                "@id": "_:Word_47"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_46"
+              },
+              "relation": "nsubj",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_45"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_46"
+              },
+              "relation": "nmod_to",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_48"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_46"
+              },
+              "relation": "punct",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_49"
+              }
+            },
+            {
+              "source": {
+                "@id": "_:Word_48"
+              },
+              "relation": "case",
+              "@type": "Dependency",
+              "type": "universal-enhanced",
+              "destination": {
+                "@id": "_:Word_47"
+              }
+            }
+          ],
+          "@id": "_:Sentence_9"
+        }
+      ]
+    }
+  ],
+  "extractions": [
+    {
+      "subtype": "entity",
+      "rule": "gazetteer++simple-np++quantification2",
+      "text": "Excessive overthinking",
+      "canonicalName": "overthinking",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 0,
+              "end": 21
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 1,
+              "end": 2
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_1"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "concept",
+      "groundings": [
+        {
+          "name": "wm_compositional",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "PredicateGrounding",
+              "theme": [
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/population_demographics/population_density/overcrowding",
+                  "value": 0.26366835832595825
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/government/decentralization",
+                  "value": 0.25771623849868774
+                }
+              ],
+              "value": 0.2536683678627014,
+              "display": "THEME: wm/concept/population_demographics/population_density/overcrowding (0.26366836)"
+            }
+          ],
+          "@type": "Groundings"
+        },
+        {
+          "name": "wm_flattened",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/crisis_and_disaster/health/mitigation/social_distancing",
+              "value": 0.24004986882209778
+            }
+          ],
+          "@type": "Groundings"
+        }
+      ],
+      "states": [
+        {
+          "@type": "State",
+          "type": "QUANT",
+          "text": "Excessive",
+          "provenance": [
+            {
+              "documentCharPositions": [
+                {
+                  "@type": "Interval",
+                  "start": 0,
+                  "end": 8
+                }
+              ],
+              "document": {
+                "@id": "_:Document_1"
+              },
+              "sentenceWordPositions": [
+                {
+                  "@type": "Interval",
+                  "start": 1,
+                  "end": 1
+                }
+              ],
+              "@type": "Provenance",
+              "sentence": {
+                "@id": "_:Sentence_1"
+              }
+            }
+          ]
+        }
+      ],
+      "@id": "_:Extraction_1"
+    },
+    {
+      "subtype": "causation",
+      "rule": "leadToSyntax1-Causal",
+      "text": "Excessive overthinking leads to insomnia",
+      "canonicalName": "Excessive overthinking leads insomnia",
+      "labels": [
+        "Causal",
+        "DirectedRelation",
+        "EntityLinker",
+        "Event"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 0,
+              "end": 39
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 1,
+              "end": 5
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_1"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "relation",
+      "groundings": [
+        {
+          "@type": "Groundings",
+          "name": "wm_compositional",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "versionDate": "2021-10-19T19:46:27Z"
+        },
+        {
+          "@type": "Groundings",
+          "name": "wm_flattened",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "versionDate": "2021-10-19T19:46:27Z"
+        }
+      ],
+      "arguments": [
+        {
+          "@type": "Argument",
+          "type": "source",
+          "value": {
+            "@id": "_:Extraction_1"
+          }
+        },
+        {
+          "@type": "Argument",
+          "type": "destination",
+          "value": {
+            "@id": "_:Extraction_3"
+          }
+        }
+      ],
+      "@id": "_:Extraction_2",
+      "trigger": {
+        "@type": "Trigger",
+        "text": "leads",
+        "provenance": [
+          {
+            "documentCharPositions": [
+              {
+                "@type": "Interval",
+                "start": 23,
+                "end": 27
+              }
+            ],
+            "document": {
+              "@id": "_:Document_1"
+            },
+            "sentenceWordPositions": [
+              {
+                "@type": "Interval",
+                "start": 3,
+                "end": 3
+              }
+            ],
+            "@type": "Provenance",
+            "sentence": {
+              "@id": "_:Sentence_1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "subtype": "entity",
+      "rule": "simple-np",
+      "text": "insomnia",
+      "canonicalName": "insomnia",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 32,
+              "end": 39
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 5,
+              "end": 5
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_1"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "concept",
+      "groundings": [
+        {
+          "name": "wm_compositional",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "PredicateGrounding",
+              "theme": [
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/health/disease/illness",
+                  "value": 0.5069965124130249
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/health/treatment/psychological_services",
+                  "value": 0.4532617926597595
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/goods/medicine",
+                  "value": 0.4124370813369751
+                }
+              ],
+              "value": 0.49699652194976807,
+              "display": "THEME: wm/concept/health/disease/illness (0.5069965)"
+            }
+          ],
+          "@type": "Groundings"
+        },
+        {
+          "name": "wm_flattened",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/disease/human_disease",
+              "value": 0.5134836435317993
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/treatment/health_treatment",
+              "value": 0.4516514837741852
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/crisis_and_disaster/famine",
+              "value": 0.4315672814846039
+            }
+          ],
+          "@type": "Groundings"
+        }
+      ],
+      "@id": "_:Extraction_3"
+    },
+    {
+      "subtype": "entity",
+      "rule": "simple-np",
+      "text": "Stress",
+      "canonicalName": "Stress",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 42,
+              "end": 47
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 1,
+              "end": 1
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_2"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "concept",
+      "groundings": [
+        {
+          "name": "wm_compositional",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "PredicateGrounding",
+              "theme": [
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/crisis_or_disaster/conflict/tension",
+                  "value": 0.6831732392311096
+                }
+              ],
+              "value": 0.6731732487678528,
+              "display": "THEME: wm/concept/crisis_or_disaster/conflict/tension (0.68317324)"
+            }
+          ],
+          "@type": "Groundings"
+        },
+        {
+          "name": "wm_flattened",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/social_and_political/conflict/tension",
+              "value": 0.742330014705658
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/trend",
+              "value": 0.5347497463226318
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/treatment/health_treatment",
+              "value": 0.5309308171272278
+            }
+          ],
+          "@type": "Groundings"
+        }
+      ],
+      "@id": "_:Extraction_4"
+    },
+    {
+      "subtype": "causation",
+      "rule": "ported_syntax_1_verb-Causal",
+      "text": "Stress caused insomnia",
+      "canonicalName": "Stress caused insomnia",
+      "labels": [
+        "Causal",
+        "DirectedRelation",
+        "EntityLinker",
+        "Event"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 42,
+              "end": 63
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 1,
+              "end": 3
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_2"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "relation",
+      "groundings": [
+        {
+          "@type": "Groundings",
+          "name": "wm_compositional",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "versionDate": "2021-10-19T19:46:27Z"
+        },
+        {
+          "@type": "Groundings",
+          "name": "wm_flattened",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "versionDate": "2021-10-19T19:46:27Z"
+        }
+      ],
+      "arguments": [
+        {
+          "@type": "Argument",
+          "type": "source",
+          "value": {
+            "@id": "_:Extraction_4"
+          }
+        },
+        {
+          "@type": "Argument",
+          "type": "destination",
+          "value": {
+            "@id": "_:Extraction_6"
+          }
+        }
+      ],
+      "@id": "_:Extraction_5",
+      "trigger": {
+        "@type": "Trigger",
+        "text": "caused",
+        "provenance": [
+          {
+            "documentCharPositions": [
+              {
+                "@type": "Interval",
+                "start": 49,
+                "end": 54
+              }
+            ],
+            "document": {
+              "@id": "_:Document_1"
+            },
+            "sentenceWordPositions": [
+              {
+                "@type": "Interval",
+                "start": 2,
+                "end": 2
+              }
+            ],
+            "@type": "Provenance",
+            "sentence": {
+              "@id": "_:Sentence_2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "subtype": "entity",
+      "rule": "simple-np",
+      "text": "insomnia",
+      "canonicalName": "insomnia",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 56,
+              "end": 63
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 3,
+              "end": 3
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_2"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "concept",
+      "groundings": [
+        {
+          "name": "wm_compositional",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "PredicateGrounding",
+              "theme": [
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/health/disease/illness",
+                  "value": 0.5069965124130249
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/health/treatment/psychological_services",
+                  "value": 0.4532617926597595
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/goods/medicine",
+                  "value": 0.4124370813369751
+                }
+              ],
+              "value": 0.49699652194976807,
+              "display": "THEME: wm/concept/health/disease/illness (0.5069965)"
+            }
+          ],
+          "@type": "Groundings"
+        },
+        {
+          "name": "wm_flattened",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/disease/human_disease",
+              "value": 0.5134836435317993
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/treatment/health_treatment",
+              "value": 0.4516514837741852
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/crisis_and_disaster/famine",
+              "value": 0.4315672814846039
+            }
+          ],
+          "@type": "Groundings"
+        }
+      ],
+      "@id": "_:Extraction_6"
+    },
+    {
+      "subtype": "entity",
+      "rule": "simple-np",
+      "text": "Insomnia",
+      "canonicalName": "Insomnia",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 66,
+              "end": 73
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 1,
+              "end": 1
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_3"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "concept",
+      "groundings": [
+        {
+          "name": "wm_compositional",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "PredicateGrounding",
+              "theme": [
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/health/disease/illness",
+                  "value": 0.5069965124130249
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/health/treatment/psychological_services",
+                  "value": 0.4532617926597595
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/goods/medicine",
+                  "value": 0.4124370813369751
+                }
+              ],
+              "value": 0.49699652194976807,
+              "display": "THEME: wm/concept/health/disease/illness (0.5069965)"
+            }
+          ],
+          "@type": "Groundings"
+        },
+        {
+          "name": "wm_flattened",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/disease/human_disease",
+              "value": 0.5134836435317993
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/treatment/health_treatment",
+              "value": 0.4516514837741852
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/crisis_and_disaster/famine",
+              "value": 0.4315672814846039
+            }
+          ],
+          "@type": "Groundings"
+        }
+      ],
+      "@id": "_:Extraction_7"
+    },
+    {
+      "subtype": "causation",
+      "rule": "ported_syntax_1_verb-Causal",
+      "text": "Insomnia causes stress",
+      "canonicalName": "Insomnia causes stress",
+      "labels": [
+        "Causal",
+        "DirectedRelation",
+        "EntityLinker",
+        "Event"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 66,
+              "end": 87
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 1,
+              "end": 3
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_3"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "relation",
+      "groundings": [
+        {
+          "@type": "Groundings",
+          "name": "wm_compositional",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "versionDate": "2021-10-19T19:46:27Z"
+        },
+        {
+          "@type": "Groundings",
+          "name": "wm_flattened",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "versionDate": "2021-10-19T19:46:27Z"
+        }
+      ],
+      "arguments": [
+        {
+          "@type": "Argument",
+          "type": "source",
+          "value": {
+            "@id": "_:Extraction_7"
+          }
+        },
+        {
+          "@type": "Argument",
+          "type": "destination",
+          "value": {
+            "@id": "_:Extraction_9"
+          }
+        }
+      ],
+      "@id": "_:Extraction_8",
+      "trigger": {
+        "@type": "Trigger",
+        "text": "causes",
+        "provenance": [
+          {
+            "documentCharPositions": [
+              {
+                "@type": "Interval",
+                "start": 75,
+                "end": 80
+              }
+            ],
+            "document": {
+              "@id": "_:Document_1"
+            },
+            "sentenceWordPositions": [
+              {
+                "@type": "Interval",
+                "start": 2,
+                "end": 2
+              }
+            ],
+            "@type": "Provenance",
+            "sentence": {
+              "@id": "_:Sentence_3"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "subtype": "entity",
+      "rule": "simple-np",
+      "text": "stress",
+      "canonicalName": "stress",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 82,
+              "end": 87
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 3,
+              "end": 3
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_3"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "concept",
+      "groundings": [
+        {
+          "name": "wm_compositional",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "PredicateGrounding",
+              "themeProcess": [
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/process/prevention",
+                  "value": 0.5474362969398499
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/process/hatching",
+                  "value": 0.5343300104141235
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/process/mitigation",
+                  "value": 0.5161710381507874
+                }
+              ],
+              "value": 0.537436306476593,
+              "display": "THEME PROCESS: wm/process/prevention (0.5474363)"
+            }
+          ],
+          "@type": "Groundings"
+        },
+        {
+          "name": "wm_flattened",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/social_and_political/conflict/tension",
+              "value": 0.742330014705658
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/trend",
+              "value": 0.5347497463226318
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/treatment/health_treatment",
+              "value": 0.5309308171272278
+            }
+          ],
+          "@type": "Groundings"
+        }
+      ],
+      "@id": "_:Extraction_9"
+    },
+    {
+      "subtype": "entity",
+      "rule": "simple-np",
+      "text": "Stress",
+      "canonicalName": "Stress",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 90,
+              "end": 95
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 1,
+              "end": 1
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_4"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "concept",
+      "groundings": [
+        {
+          "name": "wm_compositional",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "PredicateGrounding",
+              "theme": [
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/crisis_or_disaster/conflict/tension",
+                  "value": 0.6831732392311096
+                }
+              ],
+              "value": 0.6731732487678528,
+              "display": "THEME: wm/concept/crisis_or_disaster/conflict/tension (0.68317324)"
+            }
+          ],
+          "@type": "Groundings"
+        },
+        {
+          "name": "wm_flattened",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/social_and_political/conflict/tension",
+              "value": 0.742330014705658
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/trend",
+              "value": 0.5347497463226318
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/treatment/health_treatment",
+              "value": 0.5309308171272278
+            }
+          ],
+          "@type": "Groundings"
+        }
+      ],
+      "@id": "_:Extraction_10"
+    },
+    {
+      "subtype": "causation",
+      "rule": "reverse_causal-noun-1",
+      "text": "Stress results in insomnia",
+      "canonicalName": "Stress results insomnia",
+      "labels": [
+        "Causal",
+        "DirectedRelation",
+        "EntityLinker",
+        "Event"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 90,
+              "end": 115
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 1,
+              "end": 4
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_4"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "relation",
+      "groundings": [
+        {
+          "@type": "Groundings",
+          "name": "wm_compositional",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "versionDate": "2021-10-19T19:46:27Z"
+        },
+        {
+          "@type": "Groundings",
+          "name": "wm_flattened",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "versionDate": "2021-10-19T19:46:27Z"
+        }
+      ],
+      "arguments": [
+        {
+          "@type": "Argument",
+          "type": "source",
+          "value": {
+            "@id": "_:Extraction_10"
+          }
+        },
+        {
+          "@type": "Argument",
+          "type": "destination",
+          "value": {
+            "@id": "_:Extraction_12"
+          }
+        }
+      ],
+      "@id": "_:Extraction_11",
+      "trigger": {
+        "@type": "Trigger",
+        "text": "results in",
+        "provenance": [
+          {
+            "documentCharPositions": [
+              {
+                "@type": "Interval",
+                "start": 97,
+                "end": 106
+              }
+            ],
+            "document": {
+              "@id": "_:Document_1"
+            },
+            "sentenceWordPositions": [
+              {
+                "@type": "Interval",
+                "start": 2,
+                "end": 3
+              }
+            ],
+            "@type": "Provenance",
+            "sentence": {
+              "@id": "_:Sentence_4"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "subtype": "entity",
+      "rule": "simple-np",
+      "text": "insomnia",
+      "canonicalName": "insomnia",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 108,
+              "end": 115
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 4,
+              "end": 4
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_4"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "concept",
+      "groundings": [
+        {
+          "name": "wm_compositional",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "PredicateGrounding",
+              "theme": [
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/health/disease/illness",
+                  "value": 0.5069965124130249
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/health/treatment/psychological_services",
+                  "value": 0.4532617926597595
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/goods/medicine",
+                  "value": 0.4124370813369751
+                }
+              ],
+              "value": 0.49699652194976807,
+              "display": "THEME: wm/concept/health/disease/illness (0.5069965)"
+            }
+          ],
+          "@type": "Groundings"
+        },
+        {
+          "name": "wm_flattened",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/disease/human_disease",
+              "value": 0.5134836435317993
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/treatment/health_treatment",
+              "value": 0.4516514837741852
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/crisis_and_disaster/famine",
+              "value": 0.4315672814846039
+            }
+          ],
+          "@type": "Groundings"
+        }
+      ],
+      "@id": "_:Extraction_12"
+    },
+    {
+      "subtype": "entity",
+      "rule": "simple-np",
+      "text": "Stress",
+      "canonicalName": "Stress",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 118,
+              "end": 123
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 1,
+              "end": 1
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_5"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "concept",
+      "groundings": [
+        {
+          "name": "wm_compositional",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "PredicateGrounding",
+              "theme": [
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/crisis_or_disaster/conflict/tension",
+                  "value": 0.6831732392311096
+                }
+              ],
+              "value": 0.6731732487678528,
+              "display": "THEME: wm/concept/crisis_or_disaster/conflict/tension (0.68317324)"
+            }
+          ],
+          "@type": "Groundings"
+        },
+        {
+          "name": "wm_flattened",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/social_and_political/conflict/tension",
+              "value": 0.742330014705658
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/trend",
+              "value": 0.5347497463226318
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/treatment/health_treatment",
+              "value": 0.5309308171272278
+            }
+          ],
+          "@type": "Groundings"
+        }
+      ],
+      "@id": "_:Extraction_13"
+    },
+    {
+      "subtype": "causation",
+      "rule": "ported_syntax_1_verb-Causal",
+      "text": "Stress caused my insomnia",
+      "canonicalName": "Stress caused insomnia",
+      "labels": [
+        "Causal",
+        "DirectedRelation",
+        "EntityLinker",
+        "Event"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 118,
+              "end": 142
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 1,
+              "end": 4
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_5"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "relation",
+      "groundings": [
+        {
+          "@type": "Groundings",
+          "name": "wm_compositional",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "versionDate": "2021-10-19T19:46:27Z"
+        },
+        {
+          "@type": "Groundings",
+          "name": "wm_flattened",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "versionDate": "2021-10-19T19:46:27Z"
+        }
+      ],
+      "arguments": [
+        {
+          "@type": "Argument",
+          "type": "source",
+          "value": {
+            "@id": "_:Extraction_13"
+          }
+        },
+        {
+          "@type": "Argument",
+          "type": "destination",
+          "value": {
+            "@id": "_:Extraction_15"
+          }
+        }
+      ],
+      "@id": "_:Extraction_14",
+      "trigger": {
+        "@type": "Trigger",
+        "text": "caused",
+        "provenance": [
+          {
+            "documentCharPositions": [
+              {
+                "@type": "Interval",
+                "start": 125,
+                "end": 130
+              }
+            ],
+            "document": {
+              "@id": "_:Document_1"
+            },
+            "sentenceWordPositions": [
+              {
+                "@type": "Interval",
+                "start": 2,
+                "end": 2
+              }
+            ],
+            "@type": "Provenance",
+            "sentence": {
+              "@id": "_:Sentence_5"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "subtype": "entity",
+      "rule": "simple-np",
+      "text": "insomnia",
+      "canonicalName": "insomnia",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 135,
+              "end": 142
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 4,
+              "end": 4
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_5"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "concept",
+      "groundings": [
+        {
+          "name": "wm_compositional",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "PredicateGrounding",
+              "themeProcess": [
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/process/mitigation",
+                  "value": 0.37278151512145996
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/process/intake",
+                  "value": 0.36386850476264954
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/process/detection",
+                  "value": 0.3581281900405884
+                }
+              ],
+              "value": 0.3627815246582031,
+              "display": "THEME PROCESS: wm/process/mitigation (0.37278152)"
+            }
+          ],
+          "@type": "Groundings"
+        },
+        {
+          "name": "wm_flattened",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/disease/human_disease",
+              "value": 0.5134836435317993
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/treatment/health_treatment",
+              "value": 0.4516514837741852
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/crisis_and_disaster/famine",
+              "value": 0.4315672814846039
+            }
+          ],
+          "@type": "Groundings"
+        }
+      ],
+      "@id": "_:Extraction_15"
+    },
+    {
+      "subtype": "entity",
+      "rule": "simple-np",
+      "text": "Stress",
+      "canonicalName": "Stress",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 250,
+              "end": 255
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 1,
+              "end": 1
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_9"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "concept",
+      "groundings": [
+        {
+          "name": "wm_compositional",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "PredicateGrounding",
+              "theme": [
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/crisis_or_disaster/conflict/tension",
+                  "value": 0.6831732392311096
+                }
+              ],
+              "value": 0.6731732487678528,
+              "display": "THEME: wm/concept/crisis_or_disaster/conflict/tension (0.68317324)"
+            }
+          ],
+          "@type": "Groundings"
+        },
+        {
+          "name": "wm_flattened",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/social_and_political/conflict/tension",
+              "value": 0.742330014705658
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/trend",
+              "value": 0.5347497463226318
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/treatment/health_treatment",
+              "value": 0.5309308171272278
+            }
+          ],
+          "@type": "Groundings"
+        }
+      ],
+      "@id": "_:Extraction_16"
+    },
+    {
+      "subtype": "causation",
+      "rule": "reverse_causal-noun-1",
+      "text": "Stress results to insomnia",
+      "canonicalName": "Stress results insomnia",
+      "labels": [
+        "Causal",
+        "DirectedRelation",
+        "EntityLinker",
+        "Event"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 250,
+              "end": 275
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 1,
+              "end": 4
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_9"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "relation",
+      "groundings": [
+        {
+          "@type": "Groundings",
+          "name": "wm_compositional",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "versionDate": "2021-10-19T19:46:27Z"
+        },
+        {
+          "@type": "Groundings",
+          "name": "wm_flattened",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "versionDate": "2021-10-19T19:46:27Z"
+        }
+      ],
+      "arguments": [
+        {
+          "@type": "Argument",
+          "type": "source",
+          "value": {
+            "@id": "_:Extraction_16"
+          }
+        },
+        {
+          "@type": "Argument",
+          "type": "destination",
+          "value": {
+            "@id": "_:Extraction_18"
+          }
+        }
+      ],
+      "@id": "_:Extraction_17",
+      "trigger": {
+        "@type": "Trigger",
+        "text": "results to",
+        "provenance": [
+          {
+            "documentCharPositions": [
+              {
+                "@type": "Interval",
+                "start": 257,
+                "end": 266
+              }
+            ],
+            "document": {
+              "@id": "_:Document_1"
+            },
+            "sentenceWordPositions": [
+              {
+                "@type": "Interval",
+                "start": 2,
+                "end": 3
+              }
+            ],
+            "@type": "Provenance",
+            "sentence": {
+              "@id": "_:Sentence_9"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "subtype": "entity",
+      "rule": "simple-np",
+      "text": "insomnia",
+      "canonicalName": "insomnia",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "provenance": [
+        {
+          "documentCharPositions": [
+            {
+              "@type": "Interval",
+              "start": 268,
+              "end": 275
+            }
+          ],
+          "document": {
+            "@id": "_:Document_1"
+          },
+          "sentenceWordPositions": [
+            {
+              "@type": "Interval",
+              "start": 4,
+              "end": 4
+            }
+          ],
+          "@type": "Provenance",
+          "sentence": {
+            "@id": "_:Sentence_9"
+          }
+        }
+      ],
+      "@type": "Extraction",
+      "type": "concept",
+      "groundings": [
+        {
+          "name": "wm_compositional",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "PredicateGrounding",
+              "theme": [
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/health/disease/illness",
+                  "value": 0.5069965124130249
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/health/treatment/psychological_services",
+                  "value": 0.4532617926597595
+                },
+                {
+                  "@type": "Grounding",
+                  "ontologyConcept": "wm/concept/goods/medicine",
+                  "value": 0.4124370813369751
+                }
+              ],
+              "value": 0.49699652194976807,
+              "display": "THEME: wm/concept/health/disease/illness (0.5069965)"
+            }
+          ],
+          "@type": "Groundings"
+        },
+        {
+          "name": "wm_flattened",
+          "versionDate": "2021-10-19T19:46:27Z",
+          "version": "7df8e4a4237596bb40ceea9e72bb46821fc01827",
+          "values": [
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/disease/human_disease",
+              "value": 0.5134836435317993
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/health_and_life/treatment/health_treatment",
+              "value": 0.4516514837741852
+            },
+            {
+              "@type": "Grounding",
+              "ontologyConcept": "wm/concept/causal_factor/crisis_and_disaster/famine",
+              "value": 0.4315672814846039
+            }
+          ],
+          "@type": "Groundings"
+        }
+      ],
+      "@id": "_:Extraction_18"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+The upper layer consists of factors contributing to the major causes of the problem. For instance, the factor “Weak physical access-control” contributes to “Sensor (S1) sends incorrect water level measurements” due to intentional attack.

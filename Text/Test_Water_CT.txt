@@ -1,0 +1,4 @@
+Weak physical access-control,influences,Sensor (S1) sends incorrect water level measurements
+Sensor data integrity verification,causes,Sensor (S1) sends incorrect water level measurements
+Lack of physical maintenance,influences,Sensor (S1) sends incorrect water level measurements
+Well-written maintenance procedure,causes,Sensor (S1) sends incorrect water level measurements

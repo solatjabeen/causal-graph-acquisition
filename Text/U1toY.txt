@@ -1,0 +1,1 @@
+“Lack of physical maintenance” contributes to “Sensor (S1) sends incorrect water level measurements” due to accidental technical failure.

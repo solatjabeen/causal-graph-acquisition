@@ -1,0 +1,5 @@
+smoking,causes,bronchitis
+smoking,causes,lung cancer
+bronchitis,causes,shortness of breath
+bronchitis,causes,fatigue
+lung cancer,causes,fatigue

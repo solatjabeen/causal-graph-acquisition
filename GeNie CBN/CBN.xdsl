@@ -1,259 +1,186 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
 <smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
 	<nodes>
-		<cpt id="ottomans">
+		<cpt id="Node0">
 			<state id="True" />
 			<state id="False" />
 			<probabilities>0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="syria">
-			<state id="True" />
-			<state id="False" />
-			<parents>ottomans</parents>
-			<probabilities>0.1 0.9 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="europe">
-			<state id="True" />
-			<state id="False" />
-			<parents>syria</parents>
-			<probabilities>0.081 0.919 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node11">
+		<cpt id="india">
 			<state id="True" />
 			<state id="False" />
 			<probabilities>0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node17">
-			<state id="True" />
-			<state id="False" />
-			<parents>Node11</parents>
-			<probabilities>0.078 0.922 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node2">
 			<state id="True" />
 			<state id="False" />
-			<parents>syria Node17</parents>
-			<probabilities>0.083 0.917 0.081 0.919 0.128 0.872 0.1 0.9</probabilities>
+			<parents>Node0 india</parents>
+			<probabilities>0.156 0.844 0.058 0.9419999999999999 0.269 0.731 0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="prosperity">
+		<cpt id="Node4">
 			<state id="True" />
 			<state id="False" />
-			<parents>syria</parents>
-			<probabilities>0.513 0.487 0.1 0.9</probabilities>
+			<probabilities>0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="importance">
+		<cpt id="usa">
 			<state id="True" />
 			<state id="False" />
-			<parents>syria</parents>
-			<probabilities>0.456 0.544 0.1 0.9</probabilities>
+			<probabilities>0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="conspirators">
+		<cpt id="Node5">
 			<state id="True" />
 			<state id="False" />
-			<parents>prosperity importance</parents>
-			<probabilities>0.424 0.576 0.37 0.63 0.176 0.824 0.1 0.9</probabilities>
+			<parents>Node4 usa</parents>
+			<probabilities>0.36 0.64 0.528 0.472 0.068 0.9320000000000001 0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="enemies">
+		<cpt id="Node6">
 			<state id="True" />
 			<state id="False" />
-			<parents>conspirators</parents>
-			<probabilities>0.08 0.92 0.1 0.9</probabilities>
+			<parents>Node5</parents>
+			<probabilities>0.491 0.509 0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="conspiracies">
+		<cpt id="Node3">
 			<state id="True" />
 			<state id="False" />
-			<parents>syria conspirators</parents>
-			<probabilities>0.041 0.959 0.047 0.953 0.08799999999999999 0.912 0.1 0.9</probabilities>
+			<parents>Node0 Node2 Node6</parents>
+			<probabilities>0.424 0.576 0.305 0.695 0.733 0.267 0.528 0.472 0.284 0.716 0.058 0.9419999999999999 0.491 0.509 0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="plots">
+		<cpt id="Node7">
 			<state id="True" />
 			<state id="False" />
-			<parents>enemies</parents>
-			<probabilities>0.081 0.919 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="syrians">
-			<state id="True" />
-			<state id="False" />
-			<parents>enemies</parents>
-			<probabilities>0.045 0.955 0.1 0.9</probabilities>
+			<parents>Node5</parents>
+			<probabilities>0.528 0.472 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node12">
 			<state id="True" />
 			<state id="False" />
-			<parents>Node11</parents>
-			<probabilities>0.064 0.9360000000000001 0.1 0.9</probabilities>
+			<probabilities>0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="Node13">
+		<cpt id="Node10">
 			<state id="True" />
 			<state id="False" />
-			<parents>conspiracies</parents>
-			<probabilities>0.1 0.9 0.1 0.9</probabilities>
+			<parents>Node5 Node12</parents>
+			<probabilities>0.871 0.129 0.659 0.341 0.659 0.341 0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="Node14">
+		<cpt id="prestige">
 			<state id="True" />
 			<state id="False" />
-			<parents>conspiracies</parents>
-			<probabilities>0.066 0.9340000000000001 0.1 0.9</probabilities>
+			<parents>Node7 Node10</parents>
+			<probabilities>0.8100000000000001 0.19 0.528 0.472 0.637 0.363 0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="Node15">
+		<cpt id="Node9">
 			<state id="True" />
 			<state id="False" />
-			<parents>conspiracies</parents>
-			<probabilities>0.051 0.949 0.1 0.9</probabilities>
+			<parents>prestige Node10</parents>
+			<probabilities>0.856 0.144 0.623 0.377 0.656 0.344 0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="discord">
+		<cpt id="pakistan">
 			<state id="True" />
 			<state id="False" />
-			<parents>syrians</parents>
-			<probabilities>0.068 0.9320000000000001 0.1 0.9</probabilities>
+			<parents>Node3 Node9</parents>
+			<probabilities>0.822 0.178 0.528 0.472 0.66 0.34 0.1 0.9</probabilities>
 		</cpt>
 	</nodes>
 	<extensions>
-		<genie version="1.0" app="GeNIe 2.4.4601.0 ACADEMIC" name="Unnamed" faultnameformat="user">
-			<node id="syria">
-				<name>syria</name>
+		<genie version="1.0" app="SMILE_ACADEMIC 1.6.3" name="Unnamed">
+			<node id="Node0">
+				<name>pakistan army</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>441 172 526 227</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
-			<node id="europe">
-				<name>europe</name>
+			<node id="india">
+				<name>india</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>715 294 800 349</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
 			<node id="Node2">
-				<name>middle east</name>
+				<name>pakistan enemies</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>855 294 940 349</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
-			<node id="prosperity">
-				<name>prosperity</name>
+			<node id="Node3">
+				<name>pakistan&apos;s continued existence</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>432 292 517 347</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
-			<node id="importance">
-				<name>importance</name>
+			<node id="Node4">
+				<name>aq khan</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>573 294 658 349</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
-			<node id="conspirators">
-				<name>conspirators</name>
+			<node id="Node5">
+				<name>nuclear program</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>674 420 759 475</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
-			<node id="enemies">
-				<name>enemies</name>
+			<node id="Node6">
+				<name>nuclear bombs</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>680 524 765 579</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
-			<node id="conspiracies">
-				<name>conspiracies</name>
+			<node id="Node7">
+				<name>nuclear power</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>203 294 288 349</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
-			<node id="plots">
-				<name>plots</name>
+			<node id="prestige">
+				<name>prestige</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>779 634 864 689</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
-			<node id="syrians">
-				<name>syrians</name>
+			<node id="Node9">
+				<name>national respect</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>627 634 712 689</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
-			<node id="ottomans">
-				<name>ottomans</name>
+			<node id="Node10">
+				<name>advanced and powerful nuclear country</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>438 56 523 111</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
-			<node id="Node11">
-				<name>yusf al-azmah</name>
+			<node id="usa">
+				<name>usa</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>721 56 806 111</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
 			<node id="Node12">
-				<name>french general gouraud</name>
+				<name>zulfikar ali butto</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>800 177 885 232</position>
-				<barchart active="true" width="161" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
-			<node id="Node13">
-				<name>secretive cabals</name>
+			<node id="pakistan">
+				<name>pakistan</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>176 426 261 481</position>
-				<barchart active="true" width="128" height="64" />
-			</node>
-			<node id="Node14">
-				<name>scheming westerners</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>36 426 121 481</position>
-				<barchart active="true" width="128" height="64" />
-			</node>
-			<node id="Node15">
-				<name>envious arab neighbors</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>333 428 418 483</position>
-				<barchart active="true" width="158" height="64" />
-			</node>
-			<node id="discord">
-				<name>discord</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>355 635 440 690</position>
-				<barchart active="true" width="128" height="64" />
-			</node>
-			<node id="Node17">
-				<name>picot agreement</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="Arial" size="8" />
-				<position>641 176 726 231</position>
-				<barchart active="true" width="128" height="64" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
 			</node>
 		</genie>
 	</extensions>

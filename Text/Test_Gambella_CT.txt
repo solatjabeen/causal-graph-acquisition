@@ -1,0 +1,47 @@
+direct aid,negatively impacts,extreme poverty
+food aid provision,positively impacts,food aid
+food aid,positively impacts,food availability
+displacement,positively impacts,refugee population
+refugee population,negatively impacts,food availability
+refugee population,negatively impacts,labor
+displacement,positively impacts,extreme poverty
+population,positively impacts,labor
+labor,positively impacts,local food production
+extreme poverty,negatively impacts,food availability
+conflict resolution,negatively impacts,conflict
+conflict,negatively impacts,labor
+conflict,negatively impacts,market access
+conflict,negatively impacts,road transport
+conflict,negatively impacts,rail transport
+conflict,negatively impacts,river/lake transport
+conflict,negatively impacts,arable land
+conflict,positively impacts,displacement
+conflict,negatively impacts,food aid
+market access,positively impacts,food availability
+road transport,positively impacts,food processing and distribution
+food processing and distribution,positively impacts,market access
+rail transport,positively impacts,food processing and distribution
+river/lake transport,positively impacts,food processing and distribution
+arable land,positively impacts,local food production
+local food production,positively impacts,food processing and distribution
+local food production,positively impacts,food availability
+food imports,positively impact,road transport
+food imports,positively impact,rail transport
+flood,positively impacts,refugee population
+flood,negatively impacts,road transport
+flood,positively impacts,failed planting
+flood,positively impacts,late planting
+flood,positively impacts,other water sources: rivers lakes wells
+failed planting,negatively impacts,local food production
+late planting,negatively impacts,crop yield
+crop yield,positively impacts,local food production
+heavy rain,positively impacts,other water sources: rivers lakes wells
+rainfall,positively impacts,other water sources: rivers lakes wells
+rainfall,positively impacts,water availability
+drought,negatively impacts,other water sources: rivers lakes wells
+drought,negatively impacts,water availability
+other water sources: rivers lakes wells,positively impact,water availability
+water availability,positively impacts,crop yield
+water availability,positively impacts,local food production
+food availability,positively impacts,food security
+food security,positively impacts,avoiding famine state

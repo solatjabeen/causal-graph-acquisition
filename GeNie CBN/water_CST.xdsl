@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Node1">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.85 0.15</probabilities>
+		</cpt>
+		<cpt id="Node2">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.75 0.25</probabilities>
+		</cpt>
+		<cpt id="Node3">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Node4">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Node0">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node1 Node2 Node3 Node4</parents>
+			<probabilities>0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.443 0.5570000000000001 0.157 0.843 0.406 0.594 0.1 0.9</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.4.4601.0 ACADEMIC" name="Unnamed" faultnameformat="user">
+			<node id="Node0">
+				<name>Sensor (S1) sends incorrect water level measurements</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>489 215 574 270</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node1">
+				<name>Weak physical access-control</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>169 41 254 96</position>
+				<barchart active="true" width="176" height="64" />
+			</node>
+			<node id="Node2">
+				<name>Lack of physical maintenance</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>856 44 941 99</position>
+				<barchart active="true" width="177" height="64" />
+			</node>
+			<node id="Node3">
+				<name>Sensor data integrity verification</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>637 43 722 98</position>
+				<barchart active="true" width="180" height="64" />
+			</node>
+			<node id="Node4">
+				<name>Well-written maintenance procedure</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>403 42 488 97</position>
+				<barchart active="true" width="206" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>

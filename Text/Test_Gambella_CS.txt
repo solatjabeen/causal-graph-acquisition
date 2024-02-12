@@ -1,0 +1,47 @@
+Direct aid negatively impacts extreme poverty.
+Food aid provision positively impacts food aid.
+Food aid positively impacts food availability.
+Displacement positively impacts refugee population.
+Refugee population negatively impacts food availability.
+refugee population negatively impacts labor.
+Displacement positively impacts extreme poverty.
+Population positively impacts labor.
+Labor positively impacts local food production.
+Extreme poverty negatively impacts food availability.
+Conflict resolution negatively impacts conflict.
+Conflict negatively impacts labor.
+Conflict negatively impacts market access.
+Conflict negatively impacts road transport.
+Conflict negatively impacts rail transport.
+Conflict negatively impacts river/lake transport.
+Conflict negatively impacts arable land.
+conflict positively impacts displacement.
+conflict negatively impacts food aid.
+Market access positively impacts food availability.
+Road transport positively impacts food processing and distribution.
+Food processing and distribution positively impacts market access.
+Rail transport positively impacts food processing and distribution.
+River/lake transport positively impacts food processing and distribution.
+Arable land positively impacts local food production.
+Local food production positively impacts food processing and distribution.
+Local food production positively impacts food availability.
+Food imports positively impact road transport.
+Food imports positively impact rail transport.
+Flood positively impacts refugee population.
+Flood negatively impacts road transport.
+Flood positively impacts failed planting.
+Flood positively impacts late planting.
+Flood positively impacts other water sources: rivers, lakes, wells.
+Failed planting negatively impacts local food production.
+Late planting negatively impacts crop yield.
+Crop yield positively impacts local food production.
+Heavy rain positively impacts other water sources: rivers, lakes, wells.
+Rainfall positively impacts other water sources: rivers, lakes, wells.
+Rainfall positively impacts water availability.
+Drought negatively impacts other water sources: rivers, lakes, wells.
+Drought negatively impacts water availability.
+Other water sources: rivers, lakes, wells positively impact water availability.
+Water availability positively impacts crop yield.
+Water availability positively impacts local food production.
+Food Availability positively impacts food security.
+food security positively impacts avoiding famine state.
