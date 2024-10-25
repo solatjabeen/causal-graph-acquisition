@@ -7,380 +7,166 @@
 			<state id="False" />
 			<probabilities>0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="Node10">
-			<state id="True" />
-			<state id="False" />
-			<probabilities>0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="conflict">
-			<state id="True" />
-			<state id="False" />
-			<parents>Node10</parents>
-			<probabilities>0.04 0.96 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="displacement">
-			<state id="True" />
-			<state id="False" />
-			<parents>conflict</parents>
-			<probabilities>0.64 0.36 0.1 0.9</probabilities>
-		</cpt>
 		<cpt id="Node1">
 			<state id="True" />
 			<state id="False" />
-			<parents>Node0 displacement</parents>
-			<probabilities>0.1 0.9 0.04 0.96 0.64 0.36 0.1 0.9</probabilities>
+			<parents>Node0</parents>
+			<probabilities>0.37 0.63 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node2">
 			<state id="True" />
 			<state id="False" />
-			<probabilities>0.1 0.9</probabilities>
+			<parents>Node1</parents>
+			<probabilities>0.19 0.8100000000000001 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node3">
 			<state id="True" />
 			<state id="False" />
-			<parents>Node2 conflict</parents>
-			<probabilities>0.1 0.9 0.64 0.36 0.04 0.96 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="flood">
-			<state id="True" />
-			<state id="False" />
-			<probabilities>0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node6">
-			<state id="True" />
-			<state id="False" />
-			<parents>displacement flood</parents>
-			<probabilities>0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="population">
-			<state id="True" />
-			<state id="False" />
-			<probabilities>0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="labor">
-			<state id="True" />
-			<state id="False" />
-			<parents>Node6 population conflict</parents>
-			<probabilities>0.04 0.96 0.1 0.9 0.016 0.984 0.04 0.96 0.1 0.9 0.64 0.36 0.04 0.96 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node16">
-			<state id="True" />
-			<state id="False" />
-			<parents>conflict</parents>
-			<probabilities>0.04 0.96 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node20">
-			<state id="True" />
-			<state id="False" />
-			<parents>flood</parents>
-			<probabilities>0.64 0.36 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node21">
-			<state id="True" />
-			<state id="False" />
-			<parents>flood</parents>
-			<probabilities>0.64 0.36 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node24">
-			<state id="True" />
-			<state id="False" />
-			<probabilities>0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="rainfall">
-			<state id="True" />
-			<state id="False" />
-			<probabilities>0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="drought">
-			<state id="True" />
-			<state id="False" />
-			<probabilities>0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node22">
-			<state id="True" />
-			<state id="False" />
-			<parents>flood Node24 rainfall drought</parents>
-			<probabilities>0.856 0.144 0.9419999999999999 0.058 0.64 0.36 0.856 0.144 0.64 0.36 0.856 0.144 0.1 0.9 0.64 0.36 0.64 0.36 0.856 0.144 0.1 0.9 0.64 0.36 0.1 0.9 0.64 0.36 0.04 0.96 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node26">
-			<state id="True" />
-			<state id="False" />
-			<parents>Node22 rainfall drought</parents>
-			<probabilities>0.64 0.36 0.856 0.144 0.1 0.9 0.64 0.36 0.1 0.9 0.64 0.36 0.04 0.96 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node23">
-			<state id="True" />
-			<state id="False" />
-			<parents>Node21 Node26</parents>
-			<probabilities>0.1 0.9 0.04 0.96 0.64 0.36 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node9">
-			<state id="True" />
-			<state id="False" />
-			<parents>labor Node16 Node20 Node23 Node26</parents>
-			<probabilities>0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.977 0.023 0.9419999999999999 0.058 0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9 0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9 0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9 0.1 0.9 0.04 0.96 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node18">
-			<state id="True" />
-			<state id="False" />
-			<probabilities>0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node13">
-			<state id="True" />
-			<state id="False" />
-			<parents>conflict Node18 flood</parents>
-			<probabilities>0.04 0.96 0.1 0.9 0.016 0.984 0.04 0.96 0.1 0.9 0.64 0.36 0.04 0.96 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node14">
-			<state id="True" />
-			<state id="False" />
-			<parents>conflict Node18</parents>
-			<probabilities>0.1 0.9 0.04 0.96 0.64 0.36 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node15">
-			<state id="True" />
-			<state id="False" />
-			<parents>conflict</parents>
-			<probabilities>0.04 0.96 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node17">
-			<state id="True" />
-			<state id="False" />
-			<parents>Node9 Node13 Node14 Node15</parents>
-			<probabilities>0.977 0.023 0.9419999999999999 0.058 0.9419999999999999 0.058 0.856 0.144 0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node12">
-			<state id="True" />
-			<state id="False" />
-			<parents>conflict Node17</parents>
-			<probabilities>0.1 0.9 0.04 0.96 0.64 0.36 0.1 0.9</probabilities>
+			<parents>Node1</parents>
+			<probabilities>0.19 0.8100000000000001 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node4">
 			<state id="True" />
 			<state id="False" />
-			<parents>Node1 Node3 Node6 Node9 Node12</parents>
-			<probabilities>0.64 0.36 0.1 0.9 0.1 0.9 0.04 0.96 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9 0.1 0.9 0.04 0.96 0.04 0.96 0.016 0.984 0.64 0.36 0.1 0.9 0.1 0.9 0.04 0.96 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9 0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9 0.1 0.9 0.04 0.96 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9</probabilities>
+			<probabilities>0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="Node28">
+		<cpt id="Node5">
 			<state id="True" />
 			<state id="False" />
-			<parents>Node4</parents>
-			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+			<parents>Node1 Node4</parents>
+			<probabilities>0.271 0.729 0.19 0.8100000000000001 0.19 0.8100000000000001 0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="Node29">
+		<cpt id="pakistan">
 			<state id="True" />
 			<state id="False" />
-			<parents>Node28</parents>
+			<parents>Node5</parents>
 			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node7">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node4 Node5</parents>
+			<probabilities>0.676 0.324 0.64 0.36 0.19 0.8100000000000001 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node8">
+			<state id="True" />
+			<state id="False" />
+			<parents>pakistan</parents>
+			<probabilities>0.04 0.96 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="army">
+			<state id="True" />
+			<state id="False" />
+			<parents>pakistan</parents>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="vigilance">
+			<state id="True" />
+			<state id="False" />
+			<parents>army</parents>
+			<probabilities>0.19 0.8100000000000001 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node11">
+			<state id="True" />
+			<state id="False" />
+			<parents>vigilance</parents>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node12">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5</parents>
+			<probabilities>0.19 0.8100000000000001 0.1 0.9</probabilities>
 		</cpt>
 	</nodes>
 	<extensions>
 		<genie version="1.0" app="SMILE_ACADEMIC 1.6.3" name="Unnamed">
 			<node id="Node0">
-				<name>direct aid</name>
+				<name>zulfikar ali bhutto</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
 			<node id="Node1">
-				<name>extreme poverty</name>
+				<name>nuclear program</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
 			<node id="Node2">
-				<name>food aid provision</name>
+				<name>pakistan&apos;s commitment</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
 			<node id="Node3">
-				<name>food aid</name>
+				<name>pakistan&apos;s dedication</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
 			<node id="Node4">
-				<name>food availability</name>
+				<name>aq khan</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="displacement">
-				<name>displacement</name>
+			<node id="Node5">
+				<name>nuclear bomb</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="Node6">
-				<name>refugee population</name>
+			<node id="pakistan">
+				<name>pakistan</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="population">
-				<name>population</name>
+			<node id="Node7">
+				<name>nuclear power</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="labor">
-				<name>labor</name>
+			<node id="Node8">
+				<name>existential threats</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="Node9">
-				<name>local food production</name>
+			<node id="army">
+				<name>army</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="Node10">
-				<name>conflict resolution</name>
+			<node id="vigilance">
+				<name>vigilance</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="conflict">
-				<name>conflict</name>
+			<node id="Node11">
+				<name>national survival</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
 			<node id="Node12">
-				<name>market access</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node13">
-				<name>road transport</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node14">
-				<name>rail transport</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node15">
-				<name>river/lake transport</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node16">
-				<name>arable land</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node17">
-				<name>food processing and distribution</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node18">
-				<name>food imports</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="flood">
-				<name>flood</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node20">
-				<name>failed planting</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node21">
-				<name>late planting</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node22">
-				<name>other water sources: rivers, lakes, wells</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node23">
-				<name>crop yield</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node24">
-				<name>heavy rain</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="rainfall">
-				<name>rainfall</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node26">
-				<name>water availability</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="drought">
-				<name>drought</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node28">
-				<name>food security</name>
-				<interior color="e5f6f7" />
-				<outline color="0000bb" />
-				<font color="000000" name="MS Sans Serif" size="8" />
-				<position>160 40 245 95</position>
-			</node>
-			<node id="Node29">
-				<name>avoiding famine state</name>
+				<name>pakistan&apos;s continued existence</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
