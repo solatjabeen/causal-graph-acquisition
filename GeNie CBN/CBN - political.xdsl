@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Node0">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="india">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node2">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0 india</parents>
+			<probabilities>0.1 0.9 0.04 0.96 0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node4">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="usa">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node5">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node4 usa</parents>
+			<probabilities>0.1 0.9 0.64 0.36 0.04 0.96 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node6">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5</parents>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node3">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0 Node2 Node6</parents>
+			<probabilities>0.64 0.36 0.1 0.9 0.856 0.144 0.64 0.36 0.1 0.9 0.04 0.96 0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node7">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5</parents>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node12">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node10">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5 Node12</parents>
+			<probabilities>0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="prestige">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node7 Node10</parents>
+			<probabilities>0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node9">
+			<state id="True" />
+			<state id="False" />
+			<parents>prestige Node10</parents>
+			<probabilities>0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="pakistan">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node3 Node9</parents>
+			<probabilities>0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 4.1.4109.0 ACADEMIC" name="Unnamed">
+			<node id="Node0">
+				<name>country x army</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>47 440 132 495</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="india">
+				<name>country z</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>46 565 131 620</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node2">
+				<name>country x enemies</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>304 435 389 490</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node3">
+				<name>country x&apos;s continued existence</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>309 579 394 634</position>
+				<barchart active="true" width="148" height="69" />
+			</node>
+			<node id="Node4">
+				<name>political entity x1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>55 203 140 258</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node5">
+				<name>nuclear program</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>317 174 402 229</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node6">
+				<name>nuclear bombs</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>574 61 659 116</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node7">
+				<name>nuclear power</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>569 235 654 290</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="prestige">
+				<name>prestige</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>569 352 654 407</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node9">
+				<name>national respect</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>567 573 652 628</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node10">
+				<name>advanced and powerful nuclear country</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>317 313 402 368</position>
+				<barchart active="true" width="162" height="88" />
+			</node>
+			<node id="usa">
+				<name>country y</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>55 80 140 135</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Node12">
+				<name>political entity x2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>52 323 137 378</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="pakistan">
+				<name>country x</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" bold="true" />
+				<position>838 301 923 356</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>

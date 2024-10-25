@@ -16,19 +16,19 @@
 			<state id="True" />
 			<state id="False" />
 			<parents>Node10</parents>
-			<probabilities>0.061 0.9389999999999999 0.1 0.9</probabilities>
+			<probabilities>0.04 0.96 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="displacement">
 			<state id="True" />
 			<state id="False" />
 			<parents>conflict</parents>
-			<probabilities>0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node1">
 			<state id="True" />
 			<state id="False" />
 			<parents>Node0 displacement</parents>
-			<probabilities>0.323 0.677 0.061 0.9389999999999999 0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.1 0.9 0.04 0.96 0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node2">
 			<state id="True" />
@@ -39,7 +39,7 @@
 			<state id="True" />
 			<state id="False" />
 			<parents>Node2 conflict</parents>
-			<probabilities>0.323 0.677 0.528 0.472 0.061 0.9389999999999999 0.1 0.9</probabilities>
+			<probabilities>0.1 0.9 0.64 0.36 0.04 0.96 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="flood">
 			<state id="True" />
@@ -50,7 +50,7 @@
 			<state id="True" />
 			<state id="False" />
 			<parents>displacement flood</parents>
-			<probabilities>0.753 0.247 0.528 0.472 0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="population">
 			<state id="True" />
@@ -61,25 +61,25 @@
 			<state id="True" />
 			<state id="False" />
 			<parents>Node6 population conflict</parents>
-			<probabilities>0.198 0.802 0.323 0.677 0.037 0.963 0.061 0.9389999999999999 0.323 0.677 0.528 0.472 0.061 0.9389999999999999 0.1 0.9</probabilities>
+			<probabilities>0.04 0.96 0.1 0.9 0.016 0.984 0.04 0.96 0.1 0.9 0.64 0.36 0.04 0.96 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node16">
 			<state id="True" />
 			<state id="False" />
 			<parents>conflict</parents>
-			<probabilities>0.061 0.9389999999999999 0.1 0.9</probabilities>
+			<probabilities>0.04 0.96 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node20">
 			<state id="True" />
 			<state id="False" />
 			<parents>flood</parents>
-			<probabilities>0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node21">
 			<state id="True" />
 			<state id="False" />
 			<parents>flood</parents>
-			<probabilities>0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node24">
 			<state id="True" />
@@ -100,25 +100,25 @@
 			<state id="True" />
 			<state id="False" />
 			<parents>flood Node24 rainfall drought</parents>
-			<probabilities>0.533 0.467 0.871 0.129 0.461 0.539 0.753 0.247 0.461 0.539 0.753 0.247 0.323 0.677 0.528 0.472 0.461 0.539 0.753 0.247 0.323 0.677 0.528 0.472 0.323 0.677 0.528 0.472 0.061 0.9389999999999999 0.1 0.9</probabilities>
+			<probabilities>0.856 0.144 0.9419999999999999 0.058 0.64 0.36 0.856 0.144 0.64 0.36 0.856 0.144 0.1 0.9 0.64 0.36 0.64 0.36 0.856 0.144 0.1 0.9 0.64 0.36 0.1 0.9 0.64 0.36 0.04 0.96 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node26">
 			<state id="True" />
 			<state id="False" />
 			<parents>Node22 rainfall drought</parents>
-			<probabilities>0.461 0.539 0.753 0.247 0.323 0.677 0.528 0.472 0.323 0.677 0.528 0.472 0.061 0.9389999999999999 0.1 0.9</probabilities>
+			<probabilities>0.64 0.36 0.856 0.144 0.1 0.9 0.64 0.36 0.1 0.9 0.64 0.36 0.04 0.96 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node23">
 			<state id="True" />
 			<state id="False" />
 			<parents>Node21 Node26</parents>
-			<probabilities>0.323 0.677 0.061 0.9389999999999999 0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.1 0.9 0.04 0.96 0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node9">
 			<state id="True" />
 			<state id="False" />
 			<parents>labor Node16 Node20 Node23 Node26</parents>
-			<probabilities>0.57 0.43 0.533 0.467 0.533 0.467 0.461 0.539 0.9320000000000001 0.068 0.871 0.129 0.871 0.129 0.753 0.247 0.533 0.467 0.461 0.539 0.461 0.539 0.323 0.677 0.871 0.129 0.753 0.247 0.753 0.247 0.528 0.472 0.533 0.467 0.461 0.539 0.461 0.539 0.323 0.677 0.871 0.129 0.753 0.247 0.753 0.247 0.528 0.472 0.461 0.539 0.323 0.677 0.323 0.677 0.061 0.9389999999999999 0.753 0.247 0.528 0.472 0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.977 0.023 0.9419999999999999 0.058 0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9 0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9 0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9 0.1 0.9 0.04 0.96 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node18">
 			<state id="True" />
@@ -129,49 +129,49 @@
 			<state id="True" />
 			<state id="False" />
 			<parents>conflict Node18 flood</parents>
-			<probabilities>0.198 0.802 0.323 0.677 0.037 0.963 0.061 0.9389999999999999 0.323 0.677 0.528 0.472 0.061 0.9389999999999999 0.1 0.9</probabilities>
+			<probabilities>0.04 0.96 0.1 0.9 0.016 0.984 0.04 0.96 0.1 0.9 0.64 0.36 0.04 0.96 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node14">
 			<state id="True" />
 			<state id="False" />
 			<parents>conflict Node18</parents>
-			<probabilities>0.323 0.677 0.061 0.9389999999999999 0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.1 0.9 0.04 0.96 0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node15">
 			<state id="True" />
 			<state id="False" />
 			<parents>conflict</parents>
-			<probabilities>0.061 0.9389999999999999 0.1 0.9</probabilities>
+			<probabilities>0.04 0.96 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node17">
 			<state id="True" />
 			<state id="False" />
 			<parents>Node9 Node13 Node14 Node15</parents>
-			<probabilities>0.9320000000000001 0.068 0.871 0.129 0.871 0.129 0.753 0.247 0.871 0.129 0.753 0.247 0.753 0.247 0.528 0.472 0.871 0.129 0.753 0.247 0.753 0.247 0.528 0.472 0.753 0.247 0.528 0.472 0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.977 0.023 0.9419999999999999 0.058 0.9419999999999999 0.058 0.856 0.144 0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node12">
 			<state id="True" />
 			<state id="False" />
 			<parents>conflict Node17</parents>
-			<probabilities>0.323 0.677 0.061 0.9389999999999999 0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.1 0.9 0.04 0.96 0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node4">
 			<state id="True" />
 			<state id="False" />
 			<parents>Node1 Node3 Node6 Node9 Node12</parents>
-			<probabilities>0.326 0.674 0.282 0.718 0.282 0.718 0.198 0.802 0.533 0.467 0.461 0.539 0.461 0.539 0.323 0.677 0.282 0.718 0.198 0.802 0.198 0.802 0.037 0.963 0.461 0.539 0.323 0.677 0.323 0.677 0.061 0.9389999999999999 0.533 0.467 0.461 0.539 0.461 0.539 0.323 0.677 0.871 0.129 0.753 0.247 0.753 0.247 0.528 0.472 0.461 0.539 0.323 0.677 0.323 0.677 0.061 0.9389999999999999 0.753 0.247 0.528 0.472 0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.64 0.36 0.1 0.9 0.1 0.9 0.04 0.96 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9 0.1 0.9 0.04 0.96 0.04 0.96 0.016 0.984 0.64 0.36 0.1 0.9 0.1 0.9 0.04 0.96 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9 0.9419999999999999 0.058 0.856 0.144 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9 0.1 0.9 0.04 0.96 0.856 0.144 0.64 0.36 0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node28">
 			<state id="True" />
 			<state id="False" />
 			<parents>Node4</parents>
-			<probabilities>0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node29">
 			<state id="True" />
 			<state id="False" />
 			<parents>Node28</parents>
-			<probabilities>0.528 0.472 0.1 0.9</probabilities>
+			<probabilities>0.64 0.36 0.1 0.9</probabilities>
 		</cpt>
 	</nodes>
 	<extensions>

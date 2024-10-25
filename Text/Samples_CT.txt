@@ -1,5 +1,5 @@
-interest rates,boost,economic climate
-interest rates,strengthened,consumer sentiment
+decreased interest rates,boost,economic climate
+decreased interest rates,strengthened,consumer sentiment
 oil price,impact,transportation costs
 oil price,impact,food prices
 food prices,raised,inflation
