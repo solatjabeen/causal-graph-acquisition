@@ -7,25 +7,23 @@
 			<state id="False" />
 			<probabilities>0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="Node1">
+		<cpt id="india">
 			<state id="True" />
 			<state id="False" />
-			<parents>Node0</parents>
-			<probabilities>0.37 0.63 0.1 0.9</probabilities>
+			<probabilities>0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node2">
 			<state id="True" />
 			<state id="False" />
-			<parents>Node1</parents>
-			<probabilities>0.19 0.8100000000000001 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node3">
-			<state id="True" />
-			<state id="False" />
-			<parents>Node1</parents>
-			<probabilities>0.19 0.8100000000000001 0.1 0.9</probabilities>
+			<parents>Node0 india</parents>
+			<probabilities>0.104 0.896 0.055 0.945 0.19 0.8100000000000001 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node4">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="usa">
 			<state id="True" />
 			<state id="False" />
 			<probabilities>0.1 0.9</probabilities>
@@ -33,77 +31,82 @@
 		<cpt id="Node5">
 			<state id="True" />
 			<state id="False" />
-			<parents>Node1 Node4</parents>
-			<probabilities>0.271 0.729 0.19 0.8100000000000001 0.19 0.8100000000000001 0.1 0.9</probabilities>
+			<parents>Node4 usa</parents>
+			<probabilities>0.396 0.604 0.528 0.472 0.075 0.925 0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="pakistan">
+		<cpt id="Node6">
 			<state id="True" />
 			<state id="False" />
 			<parents>Node5</parents>
-			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+			<probabilities>0.453 0.547 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node3">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node0 Node2 Node6</parents>
+			<probabilities>0.382 0.618 0.283 0.717 0.713 0.287 0.528 0.472 0.243 0.757 0.054 0.946 0.453 0.547 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node7">
 			<state id="True" />
 			<state id="False" />
-			<parents>Node4 Node5</parents>
-			<probabilities>0.676 0.324 0.64 0.36 0.19 0.8100000000000001 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node8">
-			<state id="True" />
-			<state id="False" />
-			<parents>pakistan</parents>
-			<probabilities>0.04 0.96 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="army">
-			<state id="True" />
-			<state id="False" />
-			<parents>pakistan</parents>
-			<probabilities>0.64 0.36 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="vigilance">
-			<state id="True" />
-			<state id="False" />
-			<parents>army</parents>
-			<probabilities>0.19 0.8100000000000001 0.1 0.9</probabilities>
-		</cpt>
-		<cpt id="Node11">
-			<state id="True" />
-			<state id="False" />
-			<parents>vigilance</parents>
-			<probabilities>0.64 0.36 0.1 0.9</probabilities>
+			<parents>Node5</parents>
+			<probabilities>0.528 0.472 0.1 0.9</probabilities>
 		</cpt>
 		<cpt id="Node12">
 			<state id="True" />
 			<state id="False" />
-			<parents>Node5</parents>
-			<probabilities>0.19 0.8100000000000001 0.1 0.9</probabilities>
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node10">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node5 Node12</parents>
+			<probabilities>0.951 0.049 0.79 0.21 0.79 0.21 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="prestige">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node7 Node10</parents>
+			<probabilities>0.867 0.133 0.528 0.472 0.746 0.254 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Node9">
+			<state id="True" />
+			<state id="False" />
+			<parents>prestige Node10</parents>
+			<probabilities>0.9320000000000001 0.068 0.717 0.283 0.784 0.216 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="pakistan">
+			<state id="True" />
+			<state id="False" />
+			<parents>Node3 Node9</parents>
+			<probabilities>0.891 0.109 0.528 0.472 0.792 0.208 0.1 0.9</probabilities>
 		</cpt>
 	</nodes>
 	<extensions>
 		<genie version="1.0" app="SMILE_ACADEMIC 1.6.3" name="Unnamed">
 			<node id="Node0">
-				<name>zulfikar ali bhutto</name>
+				<name>pakistan army</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="Node1">
-				<name>nuclear program</name>
+			<node id="india">
+				<name>india</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
 			<node id="Node2">
-				<name>pakistan&apos;s commitment</name>
+				<name>pakistan enemies</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
 			<node id="Node3">
-				<name>pakistan&apos;s dedication</name>
+				<name>pakistan&apos;s continued existence</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
@@ -117,14 +120,14 @@
 				<position>160 40 245 95</position>
 			</node>
 			<node id="Node5">
-				<name>nuclear bomb</name>
+				<name>nuclear program</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="pakistan">
-				<name>pakistan</name>
+			<node id="Node6">
+				<name>nuclear bombs</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
@@ -137,36 +140,43 @@
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="Node8">
-				<name>existential threats</name>
+			<node id="prestige">
+				<name>prestige</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="army">
-				<name>army</name>
+			<node id="Node9">
+				<name>national respect</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="vigilance">
-				<name>vigilance</name>
+			<node id="Node10">
+				<name>advanced and powerful nuclear country</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
-			<node id="Node11">
-				<name>national survival</name>
+			<node id="usa">
+				<name>usa</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
 				<position>160 40 245 95</position>
 			</node>
 			<node id="Node12">
-				<name>pakistan&apos;s continued existence</name>
+				<name>zulfikar ali butto</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>160 40 245 95</position>
+			</node>
+			<node id="pakistan">
+				<name>pakistan</name>
 				<interior color="e5f6f7" />
 				<outline color="0000bb" />
 				<font color="000000" name="MS Sans Serif" size="8" />
