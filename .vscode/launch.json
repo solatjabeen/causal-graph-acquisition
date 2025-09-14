@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/sjsheikh/AppData/Local/Temp/8dd22ab3-ca7d-4999-9a0f-6cd3b29d44f5_01-UnionFind.zip.01-UnionFind.zip/01-UnionFind",
+      "program": "c:/Users/sjsheikh/AppData/Local/Temp/8dd22ab3-ca7d-4999-9a0f-6cd3b29d44f5_01-UnionFind.zip.01-UnionFind.zip/01-UnionFind/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

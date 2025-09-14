@@ -1,3 +1,9 @@
+lowered
+lower
+lowers
+create
+created
+creates
 forced
 coerce
 hale
@@ -453,6 +459,10 @@ resultant_role
 ensue
 leave
 lead
+lead to
+leads to
+led
+leads
 leave_of_absence
 farewell
 leave-taking
